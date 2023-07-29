@@ -214,7 +214,7 @@ function createFutureFilmElements() {
             <div class="cartaz">
                 <img src="${filme['poster-loc']}" alt="Poster de ${filme.titulo}" class="img-cartaz">
                 ${filme["pre-estreia"] ? '<div class="pre-estreia"><p><bold>PR&Eacute;-ESTREIA DISPON&Iacute;VEL</bold></p></div>' : ''}
-                <h2 class="cartaz-texto">${filme.titulo}</h2>
+                <h2 class="cartaz-texto titulo">${filme.titulo}</h2>
                 <h2 class="cartaz-texto">${filme.estreia}</h2>
             </div>
         `;
