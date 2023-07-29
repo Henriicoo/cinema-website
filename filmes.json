@@ -69,9 +69,14 @@
           }
         }
       },
-      "inicio": "17/03/2023",
-      "fim": "20/03/2023",
-      "pre-estreia": "true"
+      "estreia": "17/03/2023",
+      "pre-estreia": "true",
+      "direcao": "Joaquim Dos Santos, Justin K. Thompson, Kemp Powers",
+      "roteiro": "Phil Lord, Christopher Miller, Dave Callaham",
+      "atores": "Shameik Moore, Hailee Steinfeld, Brian Tyree Henry",
+      "genero": "AÇÃO/AVENTURA",
+      "imdb": "8,9",
+      "fim": "20/03/2024"
     },
     "3f8e641c-9e58-4299-aa57-eb620418a585": {
       "titulo": "Oppenheimer",
@@ -142,9 +147,14 @@
           }
         }
       },
-      "inicio": "17/03/2023",
-      "fim": "20/03/2023",
-      "pre-estreia": "true"
+      "estreia": "17/03/2023",
+      "pre-estreia": "true",
+      "direcao": "Joaquim Dos Santos, Justin K. Thompson, Kemp Powers",
+      "roteiro": "Phil Lord, Christopher Miller, Dave Callaham",
+      "atores": "Shameik Moore, Hailee Steinfeld, Brian Tyree Henry",
+      "genero": "AÇÃO/AVENTURA",
+      "imdb": "8,9",
+      "fim": "20/03/2024"
     },
     "7f5ac1bd-7071-43db-8b02-d2ef98e0fcfe": {
       "titulo": "Barbie",
@@ -215,9 +225,92 @@
           }
         }
       },
-      "inicio": "17/03/2023",
-      "fim": "20/03/2023",
-      "pre-estreia": "true"
+      "estreia": "13/03/2023",
+      "pre-estreia": "true",
+      "direcao": "Joaquim Dos Santos, Justin K. Thompson, Kemp Powers",
+      "roteiro": "Phil Lord, Christopher Miller, Dave Callaham",
+      "atores": "Shameik Moore, Hailee Steinfeld, Brian Tyree Henry",
+      "genero": "AÇÃO/AVENTURA",
+      "imdb": "8,9",
+      "fim": "20/03/2024"
+    },
+    "ba4a7ea9-d831-4d04-89ec-49ea4d54cd1a": {
+      "titulo": "Asteroid City",
+      "sinopse": "ASTEROID CITY é uma meditação poética sobre o sentido da vida. Ele conta a história de uma cidade fictícia do deserto americano por volta de 1955 e sua convenção Junior Stargazer, que reúne alunos e pais de todo o país para competição acadêmica, descanso/recreação, comédia, drama, romance e muito mais.",
+      "trailer": "https://youtube.com/watch?",
+      "banner-loc": "../images/banner-5.jpg",
+      "poster-loc": "../images/asteroid.jpg",
+      "class": "16 anos",
+      "tempo": "3h",
+      "sessoes": {
+        "seg": {
+          "sala 1": {
+            "horarios": ["1", "2"],
+            "tipo": "3d",
+            "audio": "leg"
+          },
+          "sala 2": {
+            "horarios": ["3"],
+            "tipo": "2d",
+            "audio": "dub"
+          }
+        },
+        "ter": {
+          "sala 3": {
+            "horarios": ["4", "5"],
+            "tipo": "3d",
+            "audio": "dub"
+          }
+        },
+        "qua": {
+          "sala 1": {
+            "horarios": ["20:00"],
+            "tipo": "2d",
+            "audio": "leg"
+          }
+        },
+        "qui": {
+          "sala 2": {
+            "horarios": ["19:30", "22:00"],
+            "tipo": "3d",
+            "audio": "leg"
+          },
+          "sala 3": {
+            "horarios": ["17:00"],
+            "tipo": "2d",
+            "audio": "dub"
+          }
+        },
+        "sex": {
+          "sala 1": {
+            "horarios": ["21:30"],
+            "tipo": "3d",
+            "audio": "leg"
+          }
+        },
+        "sab": {
+          "sala 2": {
+            "horarios": ["20:30"],
+            "tipo": "2d",
+            "audio": "leg"
+          }
+        },
+        "dom": {
+          "sala 1": {
+            "horarios": ["18:30", "22:30"],
+            "tipo": "3d",
+            "audio": "dub"
+          }
+        }
+      },
+      "estreia": "11/03/2024",
+      "pre-estreia": "true",
+      "direcao": "Joaquim Dos Santos, Justin K. Thompson, Kemp Powers",
+      "roteiro": "Phil Lord, Christopher Miller, Dave Callaham",
+      "atores": "Shameik Moore, Hailee Steinfeld, Brian Tyree Henry",
+      "genero": "AÇÃO/AVENTURA",
+      "imdb": "8,9",
+      "fim": "20/03/2024"
     }
   }
 }

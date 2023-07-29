@@ -294,6 +294,7 @@ header {
 }
 
 .cartaz {
+  position: relative;
   padding: 16px 16px;
 }
 
@@ -419,9 +420,9 @@ svg:hover {
 }
 
 .sessao .borda {
-  padding: 1px; !important;
-  border-radius: 5px; !important;
-  border: 5px solid #F8EBFF; !important;
+  padding: 0 3px;
+  border-radius: 5px;
+  border: 2px solid #F8EBFF;
 }
 
 .sessao .sala {
@@ -438,4 +439,20 @@ svg:hover {
 
 .uppr {
   text-transform: uppercase;
+}
+
+.pre-estreia {
+  width: 249px;
+  height: 31px;
+  position: absolute;
+  bottom: 110px; /* Adjust this value to control the distance from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+
+  border-radius: 15px;
+  background: #543DB2;
+}
+
+.pre-estreia p {
+  text-align: center;
 }

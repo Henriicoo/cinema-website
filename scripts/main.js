@@ -12,55 +12,65 @@ async function fetchJsonData() {
 // Function to create the carousel items from JSON data
 function createCarouselItems(data) {
     const carouselInner = document.getElementById('carouselInner');
+    const today = new Date();
+
     for (const uuid in data) {
         const filme = data[uuid];
-        const carouselItem = document.createElement('div');
-        carouselItem.classList.add('carousel-item');
+        const estreiaDateParts = filme.estreia.split('/');
+        const estreiaDate = new Date(estreiaDateParts[2], estreiaDateParts[1] - 1, estreiaDateParts[0]);
+        const fimDateParts = filme.fim.split('/');
+        const fimDate = new Date(fimDateParts[2], fimDateParts[1] - 1, fimDateParts[0]);
 
-        const img = document.createElement('img');
-        img.src = filme['banner-loc'];
-        img.alt = filme.titulo;
-        img.classList.add('d-block', 'w-100');
+        if (estreiaDate <= today && fimDate >= today) {
+            const carouselItem = document.createElement('div');
+            carouselItem.classList.add('carousel-item');
 
-        const carouselCaption = document.createElement('div');
-        carouselCaption.classList.add('carousel-caption');
+            const img = document.createElement('img');
+            img.src = filme['banner-loc'];
+            img.alt = filme.titulo;
+            img.classList.add('d-block', 'w-100');
 
-        const h1 = document.createElement('h1');
-        h1.textContent = filme.titulo;
+            const carouselCaption = document.createElement('div');
+            carouselCaption.classList.add('carousel-caption');
 
-        const p1 = document.createElement('p');
-        p1.classList.add('small');
-        p1.textContent = `${filme.tempo} - CLASS. ${filme.class} - EM CARTAZ ATÉ ${filme.fim}`;
+            const h1 = document.createElement('h1');
+            h1.textContent = filme.titulo;
 
-        const p2 = document.createElement('p');
-        p2.textContent = filme.sinopse;
+            const p1 = document.createElement('p');
+            p1.classList.add('small');
+            p1.textContent = `${filme.tempo} • CLASS. ${filme.class} • EM CARTAZ ATÉ ${filme.fim}`;
 
-        const carouselBtn = document.createElement('div');
-        carouselBtn.classList.add('carousel-btn');
+            const p2 = document.createElement('p');
+            p2.textContent = filme.sinopse;
 
-        const link = document.createElement('a');
-        link.href = '#prog';
-        link.classList.add('btn');
-        link.textContent = 'Ver Sessões';
+            const carouselBtn = document.createElement('div');
+            carouselBtn.classList.add('carousel-btn');
 
-        carouselBtn.appendChild(link);
-        carouselCaption.appendChild(h1);
-        carouselCaption.appendChild(p1);
-        carouselCaption.appendChild(p2);
-        carouselCaption.appendChild(carouselBtn);
-        carouselItem.appendChild(img);
-        carouselItem.appendChild(carouselCaption);
-        carouselInner.appendChild(carouselItem);
+            const link = document.createElement('a');
+            link.href = '#prog';
+            link.classList.add('btn');
+            link.textContent = 'Ver Sessões';
+
+            carouselBtn.appendChild(link);
+            carouselCaption.appendChild(h1);
+            carouselCaption.appendChild(p1);
+            carouselCaption.appendChild(p2);
+            carouselCaption.appendChild(carouselBtn);
+            carouselItem.appendChild(img);
+            carouselItem.appendChild(carouselCaption);
+            carouselInner.appendChild(carouselItem);
+        }
     }
 }
 
 // Load JSON data and create carousel items when the document is ready
 document.addEventListener('DOMContentLoaded', async () => {
     const jsonData = await fetchJsonData();
+    
     createCarouselItems(jsonData);
-    // Set the first carousel item as active
     document.querySelector('.carousel-item').classList.add('active');
     
+    createFutureFilmElements();
 });
 
 // DATAS ATUALIZADAS
@@ -154,17 +164,60 @@ function generateSessionHTML(sessoes) {
 async function createFilmesElements() {
     filmesData = await fetchJsonData(); // Utiliza a função fetchJsonData existente
     if (!filmesData) return;
-
+    
     const diaAtual = dateItems.item(currentDateIndex).id;
     
     const progBox = document.getElementById("prog-box");
     progBox.innerHTML = ""; // Clear existing content before re-generating
 
+    const today = new Date();
     for (const filmeId in filmesData) {
         const filme = filmesData[filmeId];
-        if (filme.sessoes[diaAtual]) {
+        const estreiaDateParts = filme.estreia.split('/');
+        const estreiaDate = new Date(estreiaDateParts[2], estreiaDateParts[1] - 1, estreiaDateParts[0]);
+        const fimDateParts = filme.fim.split('/');
+        const fimDate = new Date(fimDateParts[2], fimDateParts[1] - 1, fimDateParts[0]);
+
+        if (estreiaDate <= today && fimDate >= today && filme.sessoes[diaAtual]) {
             const filmeElement = generateFilmeElement(filme, diaAtual);
             progBox.appendChild(filmeElement);
         }
+    }
+}
+
+function createFutureFilmElements() {
+    const cartazesDiv = document.getElementById("em-breve-elements");
+
+    // Get today's date
+    const today = new Date();
+
+    // Filter and sort the films based on "estreia" date
+    const futureFilmes = Object.values(filmesData).filter(filme => {
+        const inicioDateParts = filme.estreia.split("/");
+        const inicioDate = new Date(inicioDateParts[2], inicioDateParts[1] - 1, inicioDateParts[0]);
+        return inicioDate > today;
+    }).sort((a, b) => {
+        const aInicioDateParts = a.estreia.split("/");
+        const bInicioDateParts = b.estreia.split("/");
+        const aInicioDate = new Date(aInicioDateParts[2], aInicioDateParts[1] - 1, aInicioDateParts[0]);
+        const bInicioDate = new Date(bInicioDateParts[2], bInicioDateParts[1] - 1, bInicioDateParts[0]);
+        return aInicioDate - bInicioDate;
+    });
+
+    // Clear existing content before re-generating
+    cartazesDiv.innerHTML = "";
+
+    for (const filme of futureFilmes) {
+        const filmElement = document.createElement("a");
+        filmElement.href = "#";
+        filmElement.innerHTML = `
+            <div class="cartaz">
+                <img src="${filme['poster-loc']}" alt="Poster de ${filme.titulo}" class="img-cartaz">
+                ${filme["pre-estreia"] ? '<div class="pre-estreia"><p><bold>PR&Eacute;-ESTREIA DISPON&Iacute;VEL</bold></p></div>' : ''}
+                <h2 class="cartaz-texto">${filme.titulo}</h2>
+                <h2 class="cartaz-texto">${filme.estreia}</h2>
+            </div>
+        `;
+        cartazesDiv.appendChild(filmElement);
     }
 }
