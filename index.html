@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="O seu melhor cinema em Matão!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link href="styles/style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900">
+    <title>Cineteatro Matão</title>
+</head>
+
+<body>
+<div class="gradient-background"></div>
+<header>
+    <nav>
+        <ul class="nav-list">
+            <li><img src="images/logo.png" alt="Logo Cine Teatro Matão"></li>
+            <li><a href="#prog" class="header-button"><h4>programa&ccedil;&atilde;o</h4></a></li>
+            <li><a href="#em-breve" class="header-button"><h4>em breve</h4></a></li>
+            <li><a href="#sobre" class="header-button"><h4>sobre</h4></a></li>
+            <li><a href="#contato" class="header-button"><h4>contato</h4></a></li>
+        </ul>
+    </nav>
+</header> <!-- header -->
+
+<section> <!-- carrossel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" id="carouselInner"></div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">
+            <path d="M28.82 33.18L19.66 24L28.82 14.82L26 12L14 24L26 36L28.82 33.18Z" fill="#F8EBFF"/>
+            <path d="M2 22C2 10.9543 10.9543 2 22 2H24C35.0457 2 44 10.9543 44 22V24C44 35.0457 35.0457 44 24 44H22C10.9543 44 2 35.0457 2 24V22Z" stroke="#F8EBFF" stroke-width="4"/>
+        </svg>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">
+            <path d="M17 33.18L26.16 24L17 14.82L19.82 12L31.82 24L19.82 36L17 33.18Z" fill="#F8EBFF"/>
+            <path d="M2 22C2 10.9543 10.9543 2 22 2H24C35.0457 2 44 10.9543 44 22V24C44 35.0457 35.0457 44 24 44H22C10.9543 44 2 35.0457 2 24V22Z" stroke="#F8EBFF" stroke-width="4"/>
+        </svg>
+    </button>
+</section>
+
+<section style="padding: 45px 0"> <!-- banner -->
+    <a href="#em-breve" class="banner">
+        <h2>Pr&eacute;-Vendas e Novidades</h2>
+        <p>Assista em primeira m&atilde;o os filmes que voc&ecirc; mais ama ou veja o que vem de novo na nossa programa&ccedil;&atilde;o!</p>
+    </a>
+</section>
+
+<section> <!-- programação -->
+    <h1 class="pd45" id="prog">Programa&ccedil;&atilde;o Completa</h1>
+    <div class="date-carousel" id="dateCarousel">
+        <button class="date-button" onclick="changeDate(-1)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">
+                <path d="M28.82 33.18L19.66 24L28.82 14.82L26 12L14 24L26 36L28.82 33.18Z" fill="#F8EBFF"/>
+                <path d="M2 22C2 10.9543 10.9543 2 22 2H24C35.0457 2 44 10.9543 44 22V24C44 35.0457 35.0457 44 24 44H22C10.9543 44 2 35.0457 2 24V22Z" stroke="#F8EBFF" stroke-width="4"/>
+            </svg>
+        </button>
+        <button class="date-item numero active" onclick="selectDate(0)"></button>
+        <button class="date-item numero" onclick="selectDate(1)"></button>
+        <button class="date-item numero" onclick="selectDate(2)"></button>
+        <button class="date-item numero" onclick="selectDate(3)"></button>
+        <button class="date-item numero" onclick="selectDate(4)"></button>
+        <button class="date-item numero" onclick="selectDate(5)"></button>
+        <button class="date-item numero" onclick="selectDate(6)"></button>
+        <button class="date-button" onclick="changeDate(1)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">
+                <path d="M17 33.18L26.16 24L17 14.82L19.82 12L31.82 24L19.82 36L17 33.18Z" fill="#F8EBFF"/>
+                <path d="M2 22C2 10.9543 10.9543 2 22 2H24C35.0457 2 44 10.9543 44 22V24C44 35.0457 35.0457 44 24 44H22C10.9543 44 2 35.0457 2 24V22Z" stroke="#F8EBFF" stroke-width="4"/>
+            </svg>
+        </button>
+    </div>
+    <div class="prog-box" id="prog-box"></div>
+</section>
+
+<section> <!-- em breve -->
+    <h1 id="em-breve" class="pd45">Em Breve</h1>
+    <div class="d-flex overflow-auto flex-nowrap cartazes">
+        <a href="#">
+            <div class="cartaz">
+                <img src="images/barbie.jpg" alt="Poster Barbie" class="img-cartaz">
+                <h2 class="cartaz-texto">Barbie</h2>
+                <h2 class="cartaz-texto">12/07</h2>
+            </div>
+        </a>
+        <a href="#">
+            <div class="cartaz">
+                <img src="images/barbie.jpg" alt="Poster Barbie" class="img-cartaz">
+                <h2 class="cartaz-texto">Barbie</h2>
+                <h2 class="cartaz-texto">12/07</h2>
+            </div>
+        </a>
+        <a href="#">
+            <div class="cartaz">
+                <img src="images/barbie.jpg" alt="Poster Barbie" class="img-cartaz">
+                <h2 class="cartaz-texto">Barbie</h2>
+                <h2 class="cartaz-texto">12/07</h2>
+            </div>
+        </a>
+        <a href="#">
+            <div class="cartaz">
+                <img src="images/barbie.jpg" alt="Poster Barbie" class="img-cartaz">
+                <h2 class="cartaz-texto">Barbie</h2>
+                <h2 class="cartaz-texto">12/07</h2>
+            </div>
+        </a>
+    </div>
+</section>
+
+<section>  <!-- sobre -->
+    <div class="sobre" id="sobre">
+        <div class="carousel-caption">
+            <h1>Sobre o Cinema</h1>
+            <p>Equipado com a mais alta tecnologia, o Cine Teatro Mat&atilde;o possui o melhor equipamento para filmes em 2D e 3D de nossa regi&atilde;o; com salas confort&aacute;veis e ambiente climatizado proporcionam mais emo&ccedil;&atilde;o e entretenimento durante a apresenta&ccedil;&atilde;o.</p>
+            <p> Inaugurado em 27 de agosto de 2003 com capacidade para 312 lugares, o Cine Teatro Mat&atilde;o possui uma s&eacute;rie de vantagens para o telespectador.</p>
+            <p> Venha conhecer e desfrutar hoje mesmo de todas as vantagens de assistir a um bom filme em um lugar agrad&aacute;vel.</p>
+        </div>
+    </div>
+</section>
+
+<footer> <!-- footer -->
+    <div class="container" id="contato">
+        <div class="row">
+            <div class="col-sm-6 col-xs-12">
+                <img src="images/logo.png" alt="Logo Cine Teatro Matão">
+                <h3>R. Jo&atilde;o Pessoa, 842 - Centro<br>Mat&atilde;o - SP</h3>
+                <div class="contato">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="33" height="28" viewBox="0 0 33 28" fill="none">
+                        <path d="M29.7 0.800049H3.3C1.485 0.800049 0.0165 2.28505 0.0165 4.10005L0 23.9C0 25.715 1.485 27.2 3.3 27.2H29.7C31.515 27.2 33 25.715 33 23.9V4.10005C33 2.28505 31.515 0.800049 29.7 0.800049ZM29.7 7.40005L16.5 15.65L3.3 7.40005V4.10005L16.5 12.35L29.7 4.10005V7.40005Z" fill="#F8EBFF"/>
+                    </svg>
+                    <a href="mailto:contato@cineteatromatao.com.br"><h5>contato@cineteatromatao.com.br</h5></a>
+                </div>
+                <div class="contato">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+                        <path d="M6.63667 14.2817C9.27667 19.47 13.53 23.705 18.7183 26.3633L22.7517 22.33C23.2467 21.835 23.98 21.67 24.6217 21.89C26.675 22.5683 28.8933 22.935 31.1667 22.935C32.175 22.935 33 23.76 33 24.7683V31.1667C33 32.175 32.175 33 31.1667 33C13.9517 33 0 19.0483 0 1.83333C0 0.825 0.825 0 1.83333 0H8.25C9.25833 0 10.0833 0.825 10.0833 1.83333C10.0833 4.125 10.45 6.325 11.1283 8.37833C11.33 9.02 11.1833 9.735 10.67 10.2483L6.63667 14.2817Z" fill="#F8EBFF"/>
+                    </svg>
+                    <a href="tel:1633847777"><h5>(16) 3384-7777</h5></a>
+                </div>
+                <div class="contato">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+                        <path d="M16.5 2.97303C20.9057 2.97303 21.4275 2.9898 23.1674 3.06918C24.7761 3.1426 25.6497 3.4114 26.2312 3.6373C27.0013 3.93662 27.5511 4.29424 28.1284 4.87159C28.7058 5.44895 29.0634 5.99866 29.3626 6.76877C29.5886 7.35025 29.8574 8.22392 29.9308 9.83258C30.0102 11.5725 30.027 12.0943 30.027 16.5C30.027 20.9057 30.0102 21.4276 29.9308 23.1674C29.8574 24.7761 29.5886 25.6498 29.3626 26.2313C29.0634 27.0014 28.7058 27.5511 28.1284 28.1285C27.5511 28.7058 27.0013 29.0634 26.2312 29.3627C25.6497 29.5887 24.7761 29.8575 23.1674 29.9309C21.4278 30.0103 20.9059 30.027 16.5 30.027C12.094 30.027 11.5722 30.0103 9.83258 29.9309C8.22385 29.8575 7.35019 29.5887 6.76877 29.3627C5.99859 29.0634 5.44888 28.7058 4.87153 28.1285C4.29417 27.5511 3.93656 27.0014 3.6373 26.2313C3.41134 25.6498 3.14254 24.7761 3.06912 23.1675C2.98973 21.4276 2.97297 20.9057 2.97297 16.5C2.97297 12.0943 2.98973 11.5725 3.06912 9.83265C3.14254 8.22392 3.41134 7.35025 3.6373 6.76877C3.93656 5.99866 4.29417 5.44895 4.87153 4.87159C5.44888 4.29424 5.99859 3.93662 6.76877 3.6373C7.35019 3.4114 8.22385 3.1426 9.83252 3.06918C11.5724 2.9898 12.0943 2.97303 16.5 2.97303ZM16.5 0C12.0188 0 11.457 0.0189941 9.69707 0.0992932C7.94077 0.179461 6.74139 0.458347 5.69181 0.866261C4.60679 1.28793 3.68662 1.85212 2.76934 2.7694C1.85205 3.68669 1.28786 4.60685 0.866196 5.69187C0.458281 6.74146 0.179396 7.94084 0.0992277 9.69714C0.0189286 11.457 0 12.0189 0 16.5C0 20.9812 0.0189286 21.5431 0.0992277 23.3029C0.179396 25.0592 0.458281 26.2586 0.866196 27.3082C1.28786 28.3931 1.85205 29.3134 2.76934 30.2307C3.68662 31.1479 4.60679 31.7121 5.69181 32.1338C6.74139 32.5417 7.94077 32.8206 9.69707 32.9008C11.457 32.9811 12.0188 33 16.5 33C20.9811 33 21.543 32.9811 23.3029 32.9008C25.0592 32.8206 26.2585 32.5417 27.3081 32.1338C28.3931 31.7121 29.3133 31.1479 30.2306 30.2307C31.1479 29.3134 31.7121 28.3932 32.1337 27.3082C32.5417 26.2586 32.8205 25.0592 32.9007 23.3029C32.981 21.5431 33 20.9812 33 16.5C33 12.0189 32.981 11.457 32.9007 9.69714C32.8205 7.94084 32.5417 6.74146 32.1337 5.69187C31.7121 4.60685 31.1479 3.68669 30.2306 2.7694C29.3133 1.85212 28.3931 1.28793 27.3081 0.866261C26.2585 0.458347 25.0592 0.179461 23.3029 0.0992932C21.543 0.0189941 20.9811 0 16.5 0ZM16.5 8.02703C11.8205 8.02703 8.02697 11.8205 8.02697 16.5C8.02697 21.1795 11.8205 24.973 16.5 24.973C21.1795 24.973 24.973 21.1795 24.973 16.5C24.973 11.8205 21.1795 8.02703 16.5 8.02703ZM16.5 22.0001C13.4624 22.0001 10.9999 19.5376 10.9999 16.5C10.9999 13.4625 13.4624 11 16.5 11C19.5375 11 22 13.4625 22 16.5C22 19.5376 19.5375 22.0001 16.5 22.0001ZM27.2877 7.69228C27.2877 8.78581 26.4013 9.67231 25.3077 9.67231C24.2142 9.67231 23.3277 8.78581 23.3277 7.69228C23.3277 6.59874 24.2142 5.71231 25.3077 5.71231C26.4013 5.71231 27.2877 6.59874 27.2877 7.69228Z" fill="#F8EBFF"/>
+                    </svg>
+                    <a href="https://instagram.com/cineteatromatao"><h5>@cineteatromatao</h5></a>
+                </div>
+                <div class="contato">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="33" viewBox="0 0 36 33" fill="none">
+                        <path d="M35.4444 16.5414C35.4444 7.41053 27.5049 0 17.7222 0C7.93956 0 0 7.41053 0 16.5414C0 24.5474 6.09644 31.2135 14.1778 32.7519V21.5038H10.6333V16.5414H14.1778V12.406C14.1778 9.21353 16.9602 6.61654 20.3806 6.61654H24.8111V11.5789H21.2667C20.2919 11.5789 19.4944 12.3233 19.4944 13.2331V16.5414H24.8111V21.5038H19.4944V33C28.4442 32.1729 35.4444 25.1263 35.4444 16.5414Z" fill="#F8EBFF"/>
+                    </svg>
+                    <a href="https://www.facebook.com/profile.php?id=100057220939556"><h5>/cineteatromatao</h5></a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <h5>Informa&ccedil;&otilde;es Importantes</h5>
+                <p>A programa&ccedil;&atilde;o pode ser alterada sem pr&eacute;vio aviso.</p>
+                <p>Hor&aacute;rio de funcionamento: das <strong>17h &agrave;s 00h</strong></p>
+                <p>Todas as <strong>segundas</strong> e <strong>quartas</strong>, o valor da entrada para o cinema ser&aacute; correspondente ao da <strong>meia entrada</strong>. Exceto aos feriados e Lan&ccedil;amentos.</p>
+                <h4>Tabela de Pre&ccedil;os</h4>
+                <p>Filmes em 2D e 3D: <strong>R$28,00</strong> (inteira) e <strong>R$14,00</strong> (meia) (Obrigat&oacute;ria a apresenta&ccedil;&atilde;o do documento que comprove a meia entrada.)</p>
+            </div>
+        </div>
+    </div>
+    <p class="small text-center">Copyright &copy; 2023 Cine Teatro Mat&atilde;o. Todos os direitos reservados.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="scripts/main.js"></script>
+</body>
+
+</html>

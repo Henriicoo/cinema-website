@@ -1,0 +1,223 @@
+{
+  "filmes": {
+    "3b7efcd7-5e5c-498e-b3ae-819685160c81": {
+      "titulo": "Homem-Aranha: Através do Aranhaverso",
+      "sinopse": "Depois de se reunir com Gwen Stacy, Homem-Aranha é jogado no multiverso, onde ele encontra uma equipe encarregada de proteger sua própria existência.",
+      "trailer": "https://youtube.com/watch?",
+      "banner-loc": "/images/banner-1.jpg",
+      "poster-loc": "/images/haranha.jpg",
+      "class": "livre",
+      "tempo": "2h 16 min",
+      "sessoes": {
+        "seg": {
+          "sala 1": {
+            "horarios": ["1.1.1", "1.1.2"],
+            "tipo": "3d",
+            "audio": "leg"
+          },
+          "sala 2": {
+            "horarios": ["1.2"],
+            "tipo": "2d",
+            "audio": "dub"
+          }
+        },
+        "ter": {
+          "sala 3": {
+            "horarios": ["2.1", "2.2"],
+            "tipo": "3d",
+            "audio": "dub"
+          }
+        },
+        "qua": {
+          "sala 1": {
+            "horarios": ["3.1"],
+            "tipo": "2d",
+            "audio": "leg"
+          }
+        },
+        "qui": {
+          "sala 2": {
+            "horarios": ["4.1.1", "4.1.2"],
+            "tipo": "3d",
+            "audio": "leg"
+          },
+          "sala 3": {
+            "horarios": ["4.2"],
+            "tipo": "2d",
+            "audio": "dub"
+          }
+        },
+        "sex": {
+          "sala 1": {
+            "horarios": ["5.1"],
+            "tipo": "3d",
+            "audio": "leg"
+          }
+        },
+        "sab": {
+          "sala 2": {
+            "horarios": ["6.1"],
+            "tipo": "2d",
+            "audio": "leg"
+          }
+        },
+        "dom": {
+          "sala 1": {
+            "horarios": ["7.1", "7.2"],
+            "tipo": "3d",
+            "audio": "dub"
+          }
+        }
+      },
+      "inicio": "17/03/2023",
+      "fim": "20/03/2023",
+      "pre-estreia": "true"
+    },
+    "3f8e641c-9e58-4299-aa57-eb620418a585": {
+      "titulo": "Oppenheimer",
+      "sinopse": "O físico J. Robert Oppenheimer trabalha com uma equipe de cientistas durante o Projeto Manhattan, levando ao desenvolvimento da bomba atômica.",
+      "trailer": "https://youtube.com/watch?",
+      "banner-loc": "../images/banner-6.jpg",
+      "poster-loc": "../images/oppenheimer.jpg",
+      "class": "16 anos",
+      "tempo": "3h",
+      "sessoes": {
+        "seg": {
+          "sala 1": {
+            "horarios": ["19:00", "20:30"],
+            "tipo": "3d",
+            "audio": "leg"
+          },
+          "sala 2": {
+            "horarios": ["16:00"],
+            "tipo": "2d",
+            "audio": "dub"
+          }
+        },
+        "ter": {
+          "sala 3": {
+            "horarios": ["18:00", "21:30"],
+            "tipo": "3d",
+            "audio": "dub"
+          }
+        },
+        "qua": {
+          "sala 1": {
+            "horarios": ["20:00"],
+            "tipo": "2d",
+            "audio": "leg"
+          }
+        },
+        "qui": {
+          "sala 2": {
+            "horarios": ["19:30", "22:00"],
+            "tipo": "3d",
+            "audio": "leg"
+          },
+          "sala 3": {
+            "horarios": ["17:00"],
+            "tipo": "2d",
+            "audio": "dub"
+          }
+        },
+        "sex": {
+          "sala 1": {
+            "horarios": ["21:30"],
+            "tipo": "3d",
+            "audio": "leg"
+          }
+        },
+        "sab": {
+          "sala 2": {
+            "horarios": ["20:30"],
+            "tipo": "2d",
+            "audio": "leg"
+          }
+        },
+        "dom": {
+          "sala 1": {
+            "horarios": ["18:30", "22:30"],
+            "tipo": "3d",
+            "audio": "dub"
+          }
+        }
+      },
+      "inicio": "17/03/2023",
+      "fim": "20/03/2023",
+      "pre-estreia": "true"
+    },
+    "7f5ac1bd-7071-43db-8b02-d2ef98e0fcfe": {
+      "titulo": "Barbie",
+      "sinopse": "Depois de ser expulsa da Barbieland por ser uma boneca de aparência menos do que perfeita, Barbie parte para o mundo humano em busca da verdadeira felicidade.",
+      "trailer": "https://youtube.com/watch?",
+      "banner-loc": "../images/banner-5.jpg",
+      "poster-loc": "../images/barbie.jpg",
+      "class": "16 anos",
+      "tempo": "3h",
+      "sessoes": {
+        "seg": {
+          "sala 1": {
+            "horarios": ["1", "2"],
+            "tipo": "3d",
+            "audio": "leg"
+          },
+          "sala 2": {
+            "horarios": ["3"],
+            "tipo": "2d",
+            "audio": "dub"
+          }
+        },
+        "ter": {
+          "sala 3": {
+            "horarios": ["4", "5"],
+            "tipo": "3d",
+            "audio": "dub"
+          }
+        },
+        "qua": {
+          "sala 1": {
+            "horarios": ["20:00"],
+            "tipo": "2d",
+            "audio": "leg"
+          }
+        },
+        "qui": {
+          "sala 2": {
+            "horarios": ["19:30", "22:00"],
+            "tipo": "3d",
+            "audio": "leg"
+          },
+          "sala 3": {
+            "horarios": ["17:00"],
+            "tipo": "2d",
+            "audio": "dub"
+          }
+        },
+        "sex": {
+          "sala 1": {
+            "horarios": ["21:30"],
+            "tipo": "3d",
+            "audio": "leg"
+          }
+        },
+        "sab": {
+          "sala 2": {
+            "horarios": ["20:30"],
+            "tipo": "2d",
+            "audio": "leg"
+          }
+        },
+        "dom": {
+          "sala 1": {
+            "horarios": ["18:30", "22:30"],
+            "tipo": "3d",
+            "audio": "dub"
+          }
+        }
+      },
+      "inicio": "17/03/2023",
+      "fim": "20/03/2023",
+      "pre-estreia": "true"
+    }
+  }
+}
