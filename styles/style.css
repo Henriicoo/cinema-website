@@ -3,6 +3,20 @@ body {
   background-color: #020024;
 }
 
+::-webkit-scrollbar {
+  width: 10px; /* Largura da barra de rolagem */
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #28166D; /* Cor do fundo da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(84, 61, 178, 0.5); /* Cor da barra de rolagem */
+  border-radius: 15px; /* Borda arredondada da barra de rolagem */
+}
+
 h1 {
   color: #F8EBFF;
   font-size: 38px;
@@ -254,17 +268,8 @@ header {
   left: 43px;
 }
 
-.cartazes::-webkit-scrollbar {
+.cartazes ::-webkit-scrollbar {
   height: 10px; /* Largura da barra de rolagem */
-}
-
-.cartazes::-webkit-scrollbar-track {
-  background-color: #28166D; /* Cor do fundo da barra de rolagem */
-}
-
-.cartazes::-webkit-scrollbar-thumb {
-  background-color: rgba(84, 61, 178, 0.5); /* Cor da barra de rolagem */
-  border-radius: 15px; /* Borda arredondada da barra de rolagem */
 }
 
 .cartaz .img-cartaz {
@@ -395,17 +400,30 @@ svg:hover {
 .prog-box {
   background-color: #543DB2;
   width: 100vw;
-  height: 620px;
   margin: -16px 0 0;
-  padding: 16px 0;
+  padding: 16px 16px 65px;
 }
 
 .prog-box .filme {
   display: flex;
-  width: 551px;
+  width: 550px;
   height: 167px;
   align-items: flex-start;
-  gap: 14px;
+  gap: 15px;
+  padding: 16px 45px;
+}
+
+#prog-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 0; /* Vertical and horizontal gap between elements */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 1100px) {
+  #prog-box {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
 }
 
 .prog-box .dados {
@@ -427,21 +445,29 @@ svg:hover {
 }
 
 .sessao {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   padding: 8px 0;
 }
 
-.sessao .borda {
-  padding: 0 3px;
+.sessao .horarios {
+  display: flex;
+  gap: 10px;
+}
+
+.sessao .numero {
+  padding: 0 4px;
   border-radius: 5px;
   border: 2px solid #F8EBFF;
 }
 
 .sessao .sala {
-  padding: 0 16px 0 0;
+  padding-right: 16px;
 }
 
 .sessao .esp {
-  padding: 0 0 0 100px;
+  margin-left: auto;
 }
 
 .capt {

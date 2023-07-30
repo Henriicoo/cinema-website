@@ -140,7 +140,7 @@ function generateFilmeElement(filme, dia) {
     </div>
     <div class="dados">
       <h3>${filme.titulo}</h3>
-      <div class="sessao">
+      <div class="sessoes">
         ${generateSessionHTML(filme.sessoes[dia])}
       </div>
     </div>
@@ -153,13 +153,20 @@ function generateFilmeElement(filme, dia) {
 function generateSessionHTML(sessoes) {
     let sessionHTML = "";
     for (const sala in sessoes) {
-        const horarios = sessoes[sala].horarios.map((horario) => `<span class="numero borda">${horario}</span>`).join("");
+        const horarios = sessoes[sala].horarios
+            .map((horario) => `<span class="numero">${horario}</span>`)
+            .join("");
         const tipoAudio = `<span class="p18 esp uppr">${sessoes[sala].tipo} ${sessoes[sala].audio}</span>`;
-        sessionHTML += `<span class="p18 sala capt">${sala}</span> ${horarios} ${tipoAudio} <br>`;
+        sessionHTML += `
+      <div class="sessao">
+        <span class="p18 sala capt">${sala}</span>
+        <div class="horarios">${horarios}</div>
+        ${tipoAudio}
+      </div>
+    `;
     }
     return sessionHTML;
 }
-
 // Função para adicionar os elementos filmes ao prog-box
 async function createFilmesElements() {
     filmesData = await fetchJsonData(); // Utiliza a função fetchJsonData existente
