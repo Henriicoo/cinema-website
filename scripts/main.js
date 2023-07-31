@@ -73,6 +73,43 @@ document.addEventListener('DOMContentLoaded', async () => {
     createFutureFilmElements();
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Get all anchor tags with the class "openModal"
+    const openModalLinks = document.querySelectorAll(".openModal");
+
+    // Get the modal and the modal body element
+    const modal = document.getElementById("myModal");
+    const modalBody = modal.querySelector(".modal-body");
+
+    // Attach click event listener to each anchor tag
+    openModalLinks.forEach((link) => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            // Get the content ID from the data-content-id attribute
+            const contentID = this.dataset.contentId;
+            // Use the content ID to fetch the content or generate it
+             // You need to implement this function to get the content based on the ID
+            // Update the modal body with the content
+            modalBody.innerHTML = getContentById(contentID);
+
+            // Show the modal
+            const bootstrapModal = new bootstrap.Modal(modal);
+            bootstrapModal.show();
+        });
+    });
+});
+
+// Example function to fetch content based on the ID (You can modify this according to your needs)
+function getContentById(contentID) {
+    // Example: assuming you have an object with content based on IDs
+    const contentMap = {
+        contentID1: "<p>This is the content for Modal 1.</p>",
+        contentID2: "<p>This is the content for Modal 2.</p>",
+        contentID3: "<p>This is the content for Modal 3.</p>",
+    };
+    return contentMap[contentID] || "<p>No content found for this ID.</p>";
+}
+
 // DATAS ATUALIZADAS
 // Variables
 const dateItemsContainer = document.getElementById('dateCarousel');
@@ -136,7 +173,9 @@ function generateFilmeElement(filme, dia) {
 
     filmeElement.innerHTML = `
     <div class="cartaz">
-      <img src="${filme['poster-loc']}" alt="Poster ${filme.titulo}" class="img-cartaz">
+      <a href="javascript:void(0)" class="openModal">
+        <img src="${filme['poster-loc']}" alt="Poster ${filme.titulo}" class="img-cartaz">
+      </a>
     </div>
     <div class="dados">
       <h3>${filme.titulo}</h3>
@@ -216,7 +255,9 @@ function createFutureFilmElements() {
 
     for (const filme of futureFilmes) {
         const filmElement = document.createElement("a");
-        filmElement.href = "#";
+        filmElement.href = "javascript:void(0)";
+        filmElement.className = "openModal";
+        filmElement.setAttribute('data-content-id',"contentID1")
         filmElement.innerHTML = `
             <div class="cartaz">
                 <img src="${filme['poster-loc']}" alt="Poster de ${filme.titulo}" class="img-cartaz">

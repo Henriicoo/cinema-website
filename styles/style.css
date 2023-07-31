@@ -9,7 +9,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #28166D; /* Cor do fundo da barra de rolagem */
+  background: linear-gradient(0deg, #201257 0%, #1A0E46 100%);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -142,7 +142,7 @@ button {
   text-transform: lowercase;
 }
 
-.header-button:hover {
+nav li:hover, nav a:hover {
   color: #BAB0BF;
 }
 
@@ -328,10 +328,17 @@ footer {
   padding: 45px 30px;
   margin: auto auto;
 }
+
 footer .contato {
   display: flex;
   align-items: center;
   gap: 22px;
+  padding: 5px 0;
+}
+
+footer .contato h5 {
+  display: inline;
+  margin-left: 15px;
 }
 
 footer a {
@@ -492,4 +499,33 @@ svg:hover {
 
 .pre-estreia p {
   text-align: center;
+}
+
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+
+/* Styling for the popup content */
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #543db1;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Styling for the close button */
+.close-popup {
+  margin-top: 10px;
+  cursor: pointer;
 }
