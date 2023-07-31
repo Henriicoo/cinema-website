@@ -317,11 +317,23 @@ header {
 .sobre {
   position: relative;
   width: 100vw;
-  height: 600px;
+  min-height: 600px;
+  display: block;
+  overflow: auto;
   background-image: linear-gradient(to right, #28166D, #28166D00), url('../images/cinema.jpg');
   background-size: cover;
   background-position: center center;
   box-shadow: 0 -4px 20px 0 #2c2767 inset;
+}
+
+@media (max-width: 767px) {
+  .sobre p {
+    font-size: 15px; /* Set the font size to 15px for small screens */
+  }
+  .sobre .carousel-caption {
+    top: 15px;
+    padding: 16px;
+  }
 }
 
 footer {
