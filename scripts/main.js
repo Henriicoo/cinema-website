@@ -252,6 +252,7 @@ function createFutureFilmElements() {
 
     // Clear existing content before re-generating
     cartazesDiv.innerHTML = "";
+    let first = true;
 
     for (const filme of futureFilmes) {
         const filmElement = document.createElement("a");
@@ -267,6 +268,15 @@ function createFutureFilmElements() {
             </div>
         `;
         cartazesDiv.appendChild(filmElement);
+        
+        if(first) {
+            first = false;
+            const bannerBreveElement = document.getElementById("banner-breve");
+            const linearGradient = "linear-gradient(0deg, rgba(40, 22, 109, 0.50) 0%, rgba(40, 22, 109, 0.50) 100%)";
+            const imageUrl = `url('images/${filme.uuid}_banner.jpg')`;
+
+            bannerBreveElement.style.backgroundImage = `${linearGradient}, ${imageUrl}`;
+        }
     }
 }
 

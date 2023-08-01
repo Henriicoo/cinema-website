@@ -240,15 +240,14 @@ header {
 }
 
 .banner {
-  background-image: linear-gradient(0deg, rgba(40, 22, 109, 0.50) 0%, rgba(40, 22, 109, 0.50) 100%), url('../images/banner-5.jpg');
+  background-image: linear-gradient(0deg, rgba(40, 22, 109, 0.50) 0%, rgba(40, 22, 109, 0.50) 100%);
   background-size: cover;
   background-position: center center;
   width: 95vw;
   height: 170px;
   border-radius: 45px;
   text-align: center;
-  margin: 16px auto; /* Centraliza o banner horizontalmente */
-  /* Centraliza o texto verticalmente */
+  margin: 16px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
