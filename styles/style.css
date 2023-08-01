@@ -3,6 +3,11 @@ body {
   background-color: #020024;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 ::-webkit-scrollbar {
   width: 10px; /* Largura da barra de rolagem */
   height: 10px;
@@ -208,21 +213,6 @@ header {
   padding: 45px;
 }
 
-/* Estilo para os botões do carrossel */
-.carousel-control-prev, .carousel-control-next {
-  width: 45px;
-  height: 45px;
-  top: 50%;
-}
-
-.carousel-control-prev {
-  left: 10px;
-}
-
-.carousel-control-next {
-  right: 10px;
-}
-
 /* Estilo para a cor do ícone ao passar o mouse */
 .carousel-control-prev:hover, .carousel-control-next:hover {
   fill: #ffffff;
@@ -331,7 +321,34 @@ header {
   }
   .sobre .carousel-caption {
     top: 15px;
-    padding: 16px;
+    padding: 0;
+    margin: auto;
+    text-align: justify;
+    align-items: center;
+    justify-content: center;
+  }
+  .cartaz .img-cartaz {
+    width: 150px;
+    height: 225px;
+  }
+  .cartaz-texto {
+    width: 150px;
+    font-size: 20px;
+  }
+  .cartazes .titulo {
+    width: 150px;
+  }
+  .cartazes {
+    margin: 0 auto;
+    padding: 0 45px;
+  }
+  .cartaz .pre-estreia {
+    width: 130px;
+    height: 40px;
+    bottom: 90px;
+  }
+  .pre-estreia p {
+    font-size: 12px;
   }
 }
 
@@ -345,6 +362,7 @@ footer .contato {
   align-items: center;
   gap: 22px;
   padding: 5px 0;
+  overflow: hidden;
 }
 
 footer .contato h5 {
@@ -360,14 +378,16 @@ footer a {
   padding: 16px 45px;
 }
 
-/* Custom CSS for date carousel */
 .date-carousel {
   display: flex;
   justify-content: flex-start !important;
   align-items: center;
-  max-width: 900px;
+  width: 100%; /* Set a fixed width to accommodate all buttons */
   padding: 16px 45px;
   margin-right: auto; /* Align to the left */
+  white-space: nowrap; /* Prevent button items from wrapping to the next line */
+  overflow-x: auto;
+  flex-direction: row;
 }
 
 .date-item {
@@ -380,17 +400,9 @@ footer a {
   background-color: #27166d;
 }
 
-/* Media query for smaller screen sizes */
 @media screen and (max-width: 900px) {
   .date-carousel {
-    flex-direction: column; /* Display items vertically */
-    align-items: center; /* Align items to the left */
-  }
-
-  .date-item {
-    width: 80%;
-    padding: 10px 30px; /* Adjust padding for vertical layout */
-    border-radius: 45px; /* Remove top border radius for first item */
+    padding: 16px 0;
   }
 }
 
@@ -420,6 +432,7 @@ svg:hover {
   width: 100vw;
   margin: -16px 0 0;
   padding: 16px 16px 65px;
+  overflow: hidden;
 }
 
 .prog-box .filme {
@@ -434,10 +447,9 @@ svg:hover {
 #prog-box {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px 0; /* Vertical and horizontal gap between elements */
+  gap: 20px 0;
 }
 
-/* Media query for smaller screens */
 @media screen and (max-width: 1100px) {
   #prog-box {
     grid-template-columns: 1fr; /* Single column layout */
@@ -511,7 +523,6 @@ svg:hover {
 .pre-estreia p {
   text-align: center;
 }
-
 
 .popup-overlay {
   display: none;
