@@ -26,7 +26,7 @@ function createCarouselItems(data) {
             carouselItem.classList.add('carousel-item');
 
             const img = document.createElement('img');
-            img.src = filme[`${filme.uuid}_banner.jpg`];
+            img.src = `images/${filme.uuid}_banner.jpg`;
             img.alt = filme.titulo;
             img.classList.add('d-block', 'w-100');
 
@@ -174,7 +174,7 @@ function generateFilmeElement(filme, dia) {
     filmeElement.innerHTML = `
     <div class="cartaz">
       <a href="javascript:void(0)" class="openModal">
-        <img src="${filme[`${filme.uuid}_poster.jpg`]}" alt="Poster de ${filme.titulo}" class="img-cartaz">
+        <img src="images/${filme.uuid}_poster.jpg" alt="Poster de ${filme.titulo}" class="img-cartaz">
       </a>
     </div>
     <div class="dados">
@@ -260,7 +260,7 @@ function createFutureFilmElements() {
         filmElement.setAttribute('data-content-id',"contentID1")
         filmElement.innerHTML = `
             <div class="cartaz">
-                <img src="${filme[`${filme.uuid}_poster.jpg`]}" alt="Poster de ${filme.titulo}" class="img-cartaz">
+                <img src="images/${filme.uuid}_poster.jpg" alt="Poster de ${filme.titulo}" class="img-cartaz">
                 ${filme["pre-estreia"] ? '<div class="pre-estreia"><p><bold>PR&Eacute;-ESTREIA DISPON&Iacute;VEL</bold></p></div>' : ''}
                 <h2 class="cartaz-texto titulo">${filme.titulo}</h2>
                 <h2 class="cartaz-texto">${filme.estreia}</h2>
