@@ -269,3 +269,50 @@ function createFutureFilmElements() {
         cartazesDiv.appendChild(filmElement);
     }
 }
+
+fetch('faq.json')
+    .then(response => response.json())
+    .then(data => {
+        const accordionContainer = document.getElementById("accordionExample");
+
+        for (const key in data) {
+            if (data.hasOwnProperty(key)) {
+                const item = data[key];
+
+                // Create the accordion item elements
+                const accordionItem = document.createElement("div");
+                accordionItem.className = "accordion-item";
+
+                const accordionHeader = document.createElement("h2");
+                accordionHeader.className = "accordion-header";
+                accordionHeader.id = "heading" + key;
+
+                const accordionButton = document.createElement("button");
+                accordionButton.className = "accordion-button";
+                accordionButton.type = "button";
+                accordionButton.setAttribute("data-bs-toggle", "collapse");
+                accordionButton.setAttribute("data-bs-target", "#collapse" + key);
+                accordionButton.setAttribute("aria-expanded", "false");
+
+                accordionButton.textContent = item.pergunta;
+
+                const accordionCollapse = document.createElement("div");
+                accordionCollapse.id = "collapse" + key;
+                accordionCollapse.className = "accordion-collapse collapse";
+                accordionCollapse.setAttribute("aria-labelledby", "heading" + key);
+                accordionCollapse.setAttribute("data-bs-parent", "#accordionExample");
+
+                const accordionBody = document.createElement("div");
+                accordionBody.className = "accordion-body";
+                accordionBody.textContent = item.resposta;
+
+                // Append the elements to the accordion container
+                accordionHeader.appendChild(accordionButton);
+                accordionItem.appendChild(accordionHeader);
+                accordionCollapse.appendChild(accordionBody);
+                accordionItem.appendChild(accordionCollapse);
+                accordionContainer.appendChild(accordionItem);
+            }
+        }
+    })
+    .catch(error => console.error('Error fetching FAQ JSON:', error));
