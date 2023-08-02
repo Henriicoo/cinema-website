@@ -343,7 +343,7 @@ header {
     background-color: #020024;
   }
   .banner {
-    padding-top: 0;
+    padding-top: 16px;
     padding-bottom: 0;
   }
   #carouselExampleIndicators .carousel-inner .carousel-item img {
