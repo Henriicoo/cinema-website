@@ -103,39 +103,11 @@ p {
   pointer-events: none; /* Ensures the background doesn't interfere with other elements */
 }
 
-nav {
-  display: flex;
-  justify-content: flex-start;
+.navbar-toggler {
+  border: none;
 }
-
-.nav-list {
-  display: flex;
-  list-style: none;
-  padding: 0 45px;
-  gap: 10px 50px;
-  align-items: center;
-}
-
-.nav-list li {
-  margin: 0 10px;
-}
-
-/* Estilos responsivos para o header */
-@media screen and (max-width: 960px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-list {
-    flex-direction: column;
-    text-align: left;
-    z-index: 3;
-  }
-
-  .nav-list li {
-    margin: 10px 0;
-  }
+.navbar-toggler svg {
+  fill: #F8EBFF;
 }
 
 button {

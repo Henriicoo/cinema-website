@@ -15,14 +15,30 @@
 <body>
 <div class="gradient-background"></div>
 <header>
-    <nav>
-        <ul class="nav-list">
-            <li><img src="images/logo.png" alt="Logo Cine Teatro Matão"></li>
-            <li><a href="#prog" class="header-button"><h4>programa&ccedil;&atilde;o</h4></a></li>
-            <li><a href="#em-breve" class="header-button"><h4>em breve</h4></a></li>
-            <li><a href="#sobre" class="header-button"><h4>sobre</h4></a></li>
-            <li><a href="#contato" class="header-button"><h4>contato</h4></a></li>
-        </ul>
+    <nav class="navbar" style="background-color: #020024;">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Logo Cine Teatro Matão">
+            </a>
+
+            <!-- Hamburger Menu for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" fill="#F8EBFF">
+                    <path d="M0 17.0068H30V14.1858H0V17.0068ZM0 9.9544H30V7.13345H0V9.9544ZM0 0.0810852V2.90203H30V0.0810852H0Z" fill="#F8EBFF"/>
+                </svg>
+            </button>
+
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav nav-pills nav-fill">
+                    <li class="nav-item"><a class="nav-link" href="#prog"><h4>programa&ccedil;&atilde;o</h4></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#em-breve"><h4>em breve</h4></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre"><h4>sobre</h4></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato"><h4>contato</h4></a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 </header> <!-- header -->
 
