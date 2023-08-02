@@ -299,7 +299,7 @@ fetch('faq.json')
                 accordionHeader.id = "heading" + key;
 
                 const accordionButton = document.createElement("button");
-                accordionButton.className = "accordion-button";
+                accordionButton.className = "accordion-button collapsed";
                 accordionButton.type = "button";
                 accordionButton.setAttribute("data-bs-toggle", "collapse");
                 accordionButton.setAttribute("data-bs-target", "#collapse" + key);
