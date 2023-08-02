@@ -141,6 +141,7 @@ nav {
 button {
   border: none;
 }
+
 .header-button {
   text-decoration: none;
   color: #F8EBFF;
@@ -316,6 +317,7 @@ header {
 }
 
 @media (max-width: 767px) {
+  /*sobre*/
   .sobre p {
     font-size: 15px; /* Set the font size to 15px for small screens */
   }
@@ -327,6 +329,7 @@ header {
     align-items: center;
     justify-content: center;
   }
+  /*em breve*/
   .cartaz .img-cartaz {
     width: 150px;
     height: 225px;
@@ -349,6 +352,63 @@ header {
   }
   .pre-estreia p {
     font-size: 12px;
+  }
+  /*banner*/
+  .carousel-caption {
+    text-align: justify;
+    justify-content: center;
+  }
+  .carousel-btn {
+    justify-content: center;
+  }
+  #carouselExampleIndicators .carousel-inner .carousel-item::before {
+    background: linear-gradient(to top, #28166D, #28166D00);
+  }
+}
+
+@media (max-width: 500px) {
+  .sinopse {
+    display: none;
+  }
+  .carousel-caption h1 {
+    text-align: center;
+    font-size: clamp(20px,8vw,38px);
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    bottom: 5px;
+  }
+  .carousel-caption .small {
+    bottom: 10px;
+  }
+  .btn {
+    padding: 10px 50px;
+    font-size: clamp(25px,5vw,25px);
+  }
+  .carousel-caption {
+    padding: 60px 0;
+    flex-direction: column;
+    position: absolute;
+    left: 50%; /* Center the caption horizontally */
+    max-width: 570px;
+    text-align: center;
+    display: block;
+    bottom: 30px; /* Adjust the distance from the bottom */
+    top: auto; /* Remove the top positioning */
+    transform: translateX(-50%); /* Only center horizontally */
+  }
+  .carousel-btn {
+    position: absolute;
+    display: block;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
   }
 }
 

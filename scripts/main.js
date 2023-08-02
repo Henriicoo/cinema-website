@@ -41,6 +41,7 @@ function createCarouselItems(data) {
             p1.textContent = `${filme.tempo} • CLASS. ${filme.class} • EM CARTAZ ATÉ ${filme.fim}`;
 
             const p2 = document.createElement('p');
+            p2.className = "sinopse";
             p2.textContent = filme.sinopse;
 
             const carouselBtn = document.createElement('div');
@@ -52,10 +53,10 @@ function createCarouselItems(data) {
             link.textContent = 'Ver Sessões';
 
             carouselBtn.appendChild(link);
+            carouselCaption.appendChild(carouselBtn);
             carouselCaption.appendChild(h1);
             carouselCaption.appendChild(p1);
             carouselCaption.appendChild(p2);
-            carouselCaption.appendChild(carouselBtn);
             carouselItem.appendChild(img);
             carouselItem.appendChild(carouselCaption);
             carouselInner.appendChild(carouselItem);
