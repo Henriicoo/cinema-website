@@ -339,6 +339,19 @@ header {
 }
 
 @media (max-width: 500px) {
+  .navbar {
+    background-color: #020024;
+  }
+  .banner {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  #carouselExampleIndicators .carousel-inner .carousel-item img {
+    height: 70vh;
+  }
+  #carouselExampleIndicators {
+    padding-bottom: 0;
+  }
   .sinopse {
     display: none;
   }
