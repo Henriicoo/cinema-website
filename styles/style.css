@@ -458,7 +458,7 @@ header {
     display: none;
   }
   .carousel-caption h1 {
-    text-align: left;
+    text-align: center;
     font-size: clamp(20px,8vw,38px);
 
     display: -webkit-box;
