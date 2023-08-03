@@ -315,7 +315,7 @@ header {
   }
   .cartazes {
     margin: 0 auto;
-    padding: 0 45px;
+    padding: 0 16px;
   }
   .cartaz .pre-estreia {
     width: 130px;
@@ -342,8 +342,9 @@ header {
   display: none;
 }
 .mobile-hide {
-  display: none;
+  display: block;
 }
+
 .filme {
   display: flex;
   width: 452px;
@@ -397,7 +398,22 @@ header {
   flex-shrink: 0;
 }
 
+#contato .contato {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#contato .contato a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+}
+
 @media (max-width: 500px) {
+  #contato .contato svg {
+    width: 15px;
+  }
   /*filme*/
   .desktop-hide {
     display: block;
@@ -448,7 +464,7 @@ header {
     display: none;
   }
   .carousel-caption h1 {
-    text-align: center;
+    text-align: left;
     font-size: clamp(20px,8vw,38px);
 
     display: -webkit-box;
@@ -505,6 +521,7 @@ footer .contato {
 footer .contato h5 {
   display: inline;
   margin-left: 15px;
+  font-size: clamp(10px,16px,18px);;
 }
 
 footer a {
@@ -569,7 +586,6 @@ svg:hover {
   width: 100vw;
   margin: -16px 0 0;
   padding: 16px 16px 65px;
-  overflow: hidden;
 }
 
 #prog-box {
