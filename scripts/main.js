@@ -173,17 +173,26 @@ function generateFilmeElement(filme, dia) {
     filmeElement.className = "filme";
 
     filmeElement.innerHTML = `
-    <div class="cartaz">
-      <a href="javascript:void(0)" class="openModal">
-        <img src="images/${filme.uuid}_poster.jpg" alt="Poster de ${filme.titulo}" class="img-cartaz">
-      </a>
-    </div>
-    <div class="dados">
-      <h3>${filme.titulo}</h3>
-      <div class="sessoes">
-        ${generateSessionHTML(filme.sessoes[dia])}
-      </div>
-    </div>
+            <div class="filme-header">
+                <h3>${filme.titulo}</h3>
+                <a href="javascript:void(0)" class="openModal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 25" fill="none">
+                        <path d="M11.25 6.27621H13.75V8.77621H11.25V6.27621ZM11.25 11.2762H13.75V18.7762H11.25V11.2762ZM12.5 0.0262146C5.6 0.0262146 0 5.62621 0 12.5262C0 19.4262 5.6 25.0262 12.5 25.0262C19.4 25.0262 25 19.4262 25 12.5262C25 5.62621 19.4 0.0262146 12.5 0.0262146ZM12.5 22.5262C6.9875 22.5262 2.5 18.0387 2.5 12.5262C2.5 7.01371 6.9875 2.52621 12.5 2.52621C18.0125 2.52621 22.5 7.01371 22.5 12.5262C22.5 18.0387 18.0125 22.5262 12.5 22.5262Z" fill="#F8EBFF"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="filme-body">
+                <div class="cartaz">
+                    <a href="javascript:void(0)" class="openModal">
+                        <img src="images/${filme.uuid}_poster.jpg" alt="Poster de $titulo" class="img-cartaz">
+                    </a>
+                </div>
+                <div class="dados">
+                    <div class="sessoes">
+                        ${generateSessionHTML(filme.sessoes[dia])}
+                    </div>
+                </div>
+            </div>
   `;
 
     return filmeElement;
@@ -199,9 +208,11 @@ function generateSessionHTML(sessoes) {
         const tipoAudio = `<span class="p18 esp uppr">${sessoes[sala].tipo} ${sessoes[sala].audio}</span>`;
         sessionHTML += `
       <div class="sessao">
-        <span class="p18 sala capt">${sala}</span>
+        <div class="sessao-head">
+            <span class="p18 sala capt">${sala}</span>
+            ${tipoAudio}
+        </div>
         <div class="horarios">${horarios}</div>
-        ${tipoAudio}
       </div>
     `;
     }
