@@ -9,59 +9,59 @@
       "sessoes": {
         "seg": {
           "sala 1": {
-            "horarios": ["1.1.1", "1.1.2"],
+            "horarios": ["20:30", "21:45"],
             "tipo": "3d",
             "audio": "leg"
           },
           "sala 2": {
-            "horarios": ["1.2"],
+            "horarios": ["19:30"],
             "tipo": "2d",
             "audio": "dub"
           }
         },
         "ter": {
           "sala 3": {
-            "horarios": ["2.1", "2.2"],
+            "horarios": ["17:30", "19:00"],
             "tipo": "3d",
             "audio": "dub"
           }
         },
         "qua": {
           "sala 1": {
-            "horarios": ["3.1"],
+            "horarios": ["20:00"],
             "tipo": "2d",
             "audio": "leg"
           }
         },
         "qui": {
           "sala 2": {
-            "horarios": ["4.1.1", "4.1.2"],
+            "horarios": ["19:30", "22:00"],
             "tipo": "3d",
             "audio": "leg"
           },
           "sala 3": {
-            "horarios": ["4.2"],
+            "horarios": ["17:00"],
             "tipo": "2d",
             "audio": "dub"
           }
         },
         "sex": {
           "sala 1": {
-            "horarios": ["5.1"],
+            "horarios": ["21:30"],
             "tipo": "3d",
             "audio": "leg"
           }
         },
         "sab": {
           "sala 2": {
-            "horarios": ["6.1"],
+            "horarios": ["20:30"],
             "tipo": "2d",
             "audio": "leg"
           }
         },
         "dom": {
           "sala 1": {
-            "horarios": ["7.1", "7.2"],
+            "horarios": ["18:30", "22:30"],
             "tipo": "3d",
             "audio": "dub"
           }
@@ -163,19 +163,19 @@
       "sessoes": {
         "seg": {
           "sala 1": {
-            "horarios": ["1", "2"],
+            "horarios": ["16:30", "19:00"],
             "tipo": "3d",
             "audio": "leg"
           },
           "sala 2": {
-            "horarios": ["3"],
+            "horarios": ["19:30"],
             "tipo": "2d",
             "audio": "dub"
           }
         },
         "ter": {
           "sala 3": {
-            "horarios": ["4", "5"],
+            "horarios": ["19:30", "21:00"],
             "tipo": "3d",
             "audio": "dub"
           }
@@ -240,19 +240,19 @@
       "sessoes": {
         "seg": {
           "sala 1": {
-            "horarios": ["1", "2"],
+            "horarios": ["20:30", "21:45"],
             "tipo": "3d",
             "audio": "leg"
           },
           "sala 2": {
-            "horarios": ["3"],
+            "horarios": ["19:30"],
             "tipo": "2d",
             "audio": "dub"
           }
         },
         "ter": {
           "sala 3": {
-            "horarios": ["4", "5"],
+            "horarios": ["17:30", "19:00"],
             "tipo": "3d",
             "audio": "dub"
           }
@@ -317,19 +317,19 @@
       "sessoes": {
         "seg": {
           "sala 1": {
-            "horarios": ["1", "2"],
+            "horarios": ["17:30", "18:30"],
             "tipo": "3d",
             "audio": "leg"
           },
           "sala 2": {
-            "horarios": ["3"],
+            "horarios": ["19:30"],
             "tipo": "2d",
             "audio": "dub"
           }
         },
         "ter": {
           "sala 3": {
-            "horarios": ["4", "5"],
+            "horarios": ["19:00", "21:00"],
             "tipo": "3d",
             "audio": "dub"
           }
