@@ -244,7 +244,7 @@ header {
   transition: opacity 300ms;
 }
 
-.img-cartaz:hover {
+.cartazes .img-cartaz:hover {
   opacity: 0.6;
 }
 
@@ -339,7 +339,7 @@ header {
 }
 
 .desktop-hide {
-  display: block;
+  display: none;
 }
 .mobile-hide {
   display: none;
@@ -359,7 +359,7 @@ header {
   align-items: center;
 }
 .filme h3 {
-  width: 408px;
+  width: 435px;
   flex-shrink: 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -581,6 +581,10 @@ svg:hover {
 @media screen and (max-width: 1100px) {
   #prog-box {
     grid-template-columns: 1fr; /* Single column layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }
 
@@ -598,8 +602,6 @@ svg:hover {
   background-size: cover;
   background-position: center center;
   border-radius: 15px;
-
-  transition: opacity 300ms;
 }
 
 .sessao {
