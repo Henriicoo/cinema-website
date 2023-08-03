@@ -240,12 +240,6 @@ header {
   background-size: cover;
   background-position: center center;
   border-radius: 15px;
-
-  transition: opacity 300ms;
-}
-
-.cartazes .img-cartaz:hover {
-  opacity: 0.6;
 }
 
 .cartaz-texto {
@@ -551,7 +545,7 @@ footer a {
   flex-direction: column;
   padding: 10px 30px;
   position: relative;
-  background-color: #27166d;
+  background-color: #28166D;
 }
 
 @media screen and (max-width: 900px) {
