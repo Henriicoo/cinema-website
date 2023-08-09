@@ -74,17 +74,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     createFutureFilmElements();
 });
 
-// Example function to fetch content based on the ID (You can modify this according to your needs)
-function getContentById(contentID) {
-    // Example: assuming you have an object with content based on IDs
-    const contentMap = {
-        contentID1: "<p>This is the content for Modal 1.</p>",
-        contentID2: "<p>This is the content for Modal 2.</p>",
-        contentID3: "<p>This is the content for Modal 3.</p>",
-    };
-    return contentMap[contentID] || "<p>No content found for this ID.</p>";
-}
-
 // DATAS ATUALIZADAS
 // Variables
 const dateItemsContainer = document.getElementById('dateCarousel');
