@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--suppress JSUnresolvedLibraryURL -->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
+    <link href="styles/style.css" rel="stylesheet"/>
+    <link href="styles/edit.css" rel="stylesheet"/>
+    <title>Editar Programação</title>
+</head>
+<body>
+<h1>Informa&ccedil;&otilde;es Gerais</h1>
+<section>
+    <div class="row g-2">
+        <div class="col-md-9">
+            <div class="form-floating">
+                <textarea style="overflow: hidden" class="form-control" placeholder=" " id="titulo"></textarea>
+                <label for="titulo">T&iacute;tulo</label>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <button class="btn">Importar Dados</button>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="row g-2">
+        <div class="col-md-8">
+            <div class="form-floating">
+                <textarea class="form-control" placeholder=" " id="sinopse" style="height: 175px"></textarea>
+                <label for="sinopse">Sinopse</label>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="row g-2">
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <textarea style="overflow: hidden" class="form-control" placeholder=" " id="dir"></textarea>
+                        <label for="dir">Dire&ccedil;&atilde;o:</label>
+                    </div>
+                    <div class="form-floating">
+                        <textarea style="overflow: hidden" class="form-control" placeholder=" " id="rot"></textarea>
+                        <label for="rot">Roteiro:</label>
+                    </div>
+                    <div class="form-floating">
+                        <textarea style="overflow: hidden" class="form-control" placeholder=" " id="atr"></textarea>
+                        <label for="atr">Atores:</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <textarea style="overflow: hidden" class="form-control" placeholder=" " id="clas"></textarea>
+                        <label for="clas">Classifica&ccedil;&atilde;o:</label>
+                    </div>
+                    <div class="form-floating">
+                        <textarea style="overflow: hidden" class="form-control" placeholder=" " id="imdb"></textarea>
+                        <label for="imdb">IMDb:</label>
+                    </div>
+                    <div class="form-floating">
+                        <textarea style="overflow: hidden" class="form-control" placeholder=" " id="gen"></textarea>
+                        <label for="gen">G&ecirc;nero:</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="row g-2">
+        <div class="col">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-left: 32px; padding-right: 32px">
+                <span class="small">Data de estreia</span>
+                <span class="small">Data de encerramento</span>
+            </div>
+            <input class="form-control" style="text-align: center" type="text"  name="daterange" readonly>
+        </div>
+        <div class="col">
+            <div class="form-check form-switch form-check-reverse">
+                <input class="form-check-input" type="checkbox" role="switch" id="preestr">
+                <label class="form-check-label" for="preestr"><h5>Habilitar pre-estreia</h5></label>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="row">
+        <div class="col">
+            <h5>Imagem de Poster</h5>
+            <input class="form-control" type="file" id="posterFile">
+        </div>
+        <div class="col">
+            <h5>Imagem de Banner</h5>
+            <input class="form-control" type="file" id="bannerFile">
+        </div>
+    </div>
+</section>
+
+<section>
+    <h1>Sessões</h1>
+    <div class="d-flex overflow-auto flex-nowrap">
+        <button class="dia-item numero active" onclick="changeDate(0)">DOM</button>
+        <button class="dia-item numero" onclick="changeDate(1)">SEG</button>
+        <button class="dia-item numero" onclick="changeDate(2)">TER</button>
+        <button class="dia-item numero" onclick="changeDate(3)">QUA</button>
+        <button class="dia-item numero" onclick="changeDate(4)">QUI</button>
+        <button class="dia-item numero" onclick="changeDate(5)">SEX</button>
+        <button class="dia-item numero" onclick="changeDate(6)">SAB</button>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/edit.js"></script>
+</body>
+</html>
