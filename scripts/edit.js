@@ -44,7 +44,7 @@ $('input[name="daterange"]').daterangepicker({
     console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
 });
 
-function changeDate(selectedIndex) {
+function changeEditDate(selectedIndex) {
     const buttons = document.querySelectorAll('.dia-item');
 
     buttons.forEach((button, index) => {

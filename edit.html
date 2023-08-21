@@ -14,7 +14,7 @@
     <title>Editar Programação</title>
 </head>
 <body>
-<h1>Informa&ccedil;&otilde;es Gerais</h1>
+<h1>Informa&ccedil;&otilde;es do Filme</h1>
 <section>
     <div class="row g-2">
         <div class="col-md-9">
@@ -30,49 +30,72 @@
 </section>
 
 <section>
+    <div class="form-floating">
+        <textarea class="form-control" placeholder=" " id="sinopse" style="height: 175px"></textarea>
+        <label for="sinopse">Sinopse</label>
+    </div>
+</section>
+
+<section>
+    <h2>Dados</h2>
     <div class="row g-2">
-        <div class="col-md-8">
+        <span class="small">sobre o filme</span>
+        <div class="col">
             <div class="form-floating">
-                <textarea class="form-control" placeholder=" " id="sinopse" style="height: 175px"></textarea>
-                <label for="sinopse">Sinopse</label>
+                <textarea style="overflow: hidden" class="form-control" placeholder=" " id="tmp"></textarea>
+                <label for="tmp">Dura&ccedil;&atilde;o</label>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="row g-2">
-                <div class="col-md-6">
-                    <div class="form-floating">
-                        <textarea style="overflow: hidden" class="form-control" placeholder=" " id="dir"></textarea>
-                        <label for="dir">Dire&ccedil;&atilde;o:</label>
-                    </div>
-                    <div class="form-floating">
-                        <textarea style="overflow: hidden" class="form-control" placeholder=" " id="rot"></textarea>
-                        <label for="rot">Roteiro:</label>
-                    </div>
-                    <div class="form-floating">
-                        <textarea style="overflow: hidden" class="form-control" placeholder=" " id="atr"></textarea>
-                        <label for="atr">Atores:</label>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-floating">
-                        <textarea style="overflow: hidden" class="form-control" placeholder=" " id="clas"></textarea>
-                        <label for="clas">Classifica&ccedil;&atilde;o:</label>
-                    </div>
-                    <div class="form-floating">
-                        <textarea style="overflow: hidden" class="form-control" placeholder=" " id="imdb"></textarea>
-                        <label for="imdb">IMDb:</label>
-                    </div>
-                    <div class="form-floating">
-                        <textarea style="overflow: hidden" class="form-control" placeholder=" " id="gen"></textarea>
-                        <label for="gen">G&ecirc;nero:</label>
-                    </div>
-                </div>
+        <div class="col">
+            <div class="form-floating">
+                <textarea style="overflow: hidden" class="form-control" placeholder=" " id="gen"></textarea>
+                <label for="gen">G&ecirc;nero</label>
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-floating">
+                <textarea style="overflow: hidden" class="form-control" placeholder=" " id="clas"></textarea>
+                <label for="clas">Classifica&ccedil;&atilde;o</label>
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-floating">
+                <textarea style="overflow: hidden" class="form-control" placeholder=" " id="imdb"></textarea>
+                <label for="imdb">IMDb</label>
+            </div>
+        </div>
+    </div>
+    <span class="small">sobre a produ&ccedil;&atilde;o</span>
+    <div class="row g-2">
+        <div class="col">
+            <div class="form-floating">
+                <textarea style="overflow: hidden" class="form-control" placeholder=" " id="dir"></textarea>
+                <label for="dir">Dire&ccedil;&atilde;o</label>
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-floating">
+                <textarea style="overflow: hidden" class="form-control" placeholder=" " id="rot"></textarea>
+                <label for="rot">Roteiro</label>
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-floating">
+                <textarea style="overflow: hidden" class="form-control" placeholder=" " id="atr"></textarea>
+                <label for="atr">Atores</label>
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-floating">
+                <textarea style="overflow: hidden" class="form-control" placeholder=" " id="trl"></textarea>
+                <label for="trl">Trailer</label>
             </div>
         </div>
     </div>
 </section>
 
 <section>
+    <h2>Datas</h2>
     <div class="row g-2">
         <div class="col">
             <div style="display: flex; justify-content: space-between; align-items: center; padding-left: 32px; padding-right: 32px">
@@ -91,28 +114,45 @@
 </section>
 
 <section>
+    <h2>Imagens do Site</h2>
     <div class="row">
         <div class="col">
-            <h5>Imagem de Poster</h5>
+            <span class="small pd16">Imagem de Poster</span>
             <input class="form-control" type="file" id="posterFile">
         </div>
         <div class="col">
-            <h5>Imagem de Banner</h5>
+            <span class="small pd16">Imagem de Banner</span>
             <input class="form-control" type="file" id="bannerFile">
         </div>
     </div>
 </section>
 
 <section>
-    <h1>Sessões</h1>
+    <h1>Sess&otilde;es</h1>
     <div class="d-flex overflow-auto flex-nowrap">
-        <button class="dia-item numero active" onclick="changeDate(0)">DOM</button>
-        <button class="dia-item numero" onclick="changeDate(1)">SEG</button>
-        <button class="dia-item numero" onclick="changeDate(2)">TER</button>
-        <button class="dia-item numero" onclick="changeDate(3)">QUA</button>
-        <button class="dia-item numero" onclick="changeDate(4)">QUI</button>
-        <button class="dia-item numero" onclick="changeDate(5)">SEX</button>
-        <button class="dia-item numero" onclick="changeDate(6)">SAB</button>
+        <button class="dia-item numero active" onclick="changeEditDate(0)">DOM</button>
+        <button class="dia-item numero" onclick="changeEditDate(1)">SEG</button>
+        <button class="dia-item numero" onclick="changeEditDate(2)">TER</button>
+        <button class="dia-item numero" onclick="changeEditDate(3)">QUA</button>
+        <button class="dia-item numero" onclick="changeEditDate(4)">QUI</button>
+        <button class="dia-item numero" onclick="changeEditDate(5)">SEX</button>
+        <button class="dia-item numero" onclick="changeEditDate(6)">SAB</button>
+    </div>
+    <div class="edit-sessoes">
+        <div class="container">
+            <div class="row">
+                <div class="col align-self-start">
+                    <div class="input-group">
+                        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                            <option selected>Escolha...</option>
+                            <option value="1">Sala 1</option>
+                            <option value="2">Sala 2</option>
+                        </select>
+                        <button class="btn btn-outline-secondary" type="button">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
