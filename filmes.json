@@ -1,88 +1,11 @@
 {
   "filmes": {
-    "3b7efcd7-5e5c-498e-b3ae-819685160c81": {
-      "titulo": "Homem-Aranha: Através do Aranhaverso",
-      "sinopse": "Depois de se reunir com Gwen Stacy, Homem-Aranha é jogado no multiverso, onde ele encontra uma equipe encarregada de proteger sua própria existência.",
-      "trailer": "O8UGVY-wZsg",
-      "class": "livre",
-      "tempo": "2h 16 min",
-      "sessoes": {
-        "seg": {
-          "sala 1": {
-            "horarios": ["20:30", "21:45"],
-            "tipo": "3d",
-            "audio": "leg"
-          },
-          "sala 2": {
-            "horarios": ["19:30"],
-            "tipo": "2d",
-            "audio": "dub"
-          }
-        },
-        "ter": {
-          "sala 3": {
-            "horarios": ["17:30", "19:00"],
-            "tipo": "3d",
-            "audio": "dub"
-          }
-        },
-        "qua": {
-          "sala 1": {
-            "horarios": ["20:00"],
-            "tipo": "2d",
-            "audio": "leg"
-          }
-        },
-        "qui": {
-          "sala 2": {
-            "horarios": ["19:30", "22:00"],
-            "tipo": "3d",
-            "audio": "leg"
-          },
-          "sala 3": {
-            "horarios": ["17:00"],
-            "tipo": "2d",
-            "audio": "dub"
-          }
-        },
-        "sex": {
-          "sala 1": {
-            "horarios": ["21:30"],
-            "tipo": "3d",
-            "audio": "leg"
-          }
-        },
-        "sab": {
-          "sala 2": {
-            "horarios": ["20:30"],
-            "tipo": "2d",
-            "audio": "leg"
-          }
-        },
-        "dom": {
-          "sala 1": {
-            "horarios": ["18:30", "22:30"],
-            "tipo": "3d",
-            "audio": "dub"
-          }
-        }
-      },
-      "estreia": "17/03/2024",
-      "pre-estreia": "true",
-      "direcao": "Joaquim Dos Santos, Justin K. Thompson, Kemp Powers",
-      "roteiro": "Phil Lord, Christopher Miller, Dave Callaham",
-      "atores": "Shameik Moore, Hailee Steinfeld, Brian Tyree Henry",
-      "genero": "AÇÃO/AVENTURA",
-      "imdb": "8,9",
-      "fim": "20/03/2024",
-      "uuid": "3b7efcd7-5e5c-498e-b3ae-819685160c81"
-    },
     "3f8e641c-9e58-4299-aa57-eb620418a585": {
-      "titulo": "Oppenheimer",
-      "sinopse": "O físico J. Robert Oppenheimer trabalha com uma equipe de cientistas durante o Projeto Manhattan, levando ao desenvolvimento da bomba atômica.",
-      "trailer": "F3OxA9Cz17A",
-      "class": "16 anos",
-      "tempo": "3h",
+      "titulo": "Jogos Vorazes: A Cantiga dos Pássaros e das Serpentes",
+      "sinopse": "Anos antes de se tornar o tirânico presidente de Panem, Coriolanus Snow aos 18 anos vê uma chance de mudança de sorte quando é escolhido para ser mentor de Lucy Gray Baird, a garota tributo do empobrecido Distrito 12.",
+      "trailer": "nY4rz-71iuc",
+      "class": "14 anos",
+      "tempo": "2h 37 min",
       "sessoes": {
         "seg": {
           "sala 1": {
@@ -144,22 +67,22 @@
           }
         }
       },
-      "estreia": "17/03/2023",
+      "estreia": "15/11/2023",
       "pre-estreia": "true",
-      "direcao": "Christopher Nolan",
-      "roteiro": "Christopher Nolan, Kai Bird, Martin Sherwin",
-      "atores": "Cillian Murphy, Emily Blunt, Matt Damon",
-      "genero": "BIOGRAFIA/DRAMA/HISTÓRIA",
-      "imdb": "8,7",
+      "direcao": "Francis Lawrence",
+      "roteiro": "Suzanne Collins, Michael Lesslie",
+      "atores": "Tom Blyth, Rachel Zegler, Josh Andrés Rivera",
+      "genero": "AÇÃO/ROMANCE/DRAMA",
+      "imdb": "7,3",
       "fim": "20/03/2024",
       "uuid": "3f8e641c-9e58-4299-aa57-eb620418a585"
     },
     "7f5ac1bd-7071-43db-8b02-d2ef98e0fcfe": {
-      "titulo": "Barbie",
-      "sinopse": "Depois de ser expulsa da Barbieland por ser uma boneca de aparência menos do que perfeita, Barbie parte para o mundo humano em busca da verdadeira felicidade.",
-      "trailer": "Ujs1Ud7k49M",
-      "class": "12 anos",
-      "tempo": "1h 54 min",
+      "titulo": "Napoleão",
+      "sinopse": "Um olhar pessoal sobre as origens do líder militar francês e sua rápida e implacável ascensão a imperador. A história é vista através do prisma do relacionamento dependente e volátil de Napoleão com sua esposa e amor verdadeiro, Josefina.",
+      "trailer": "Mlmu8AaRyMY",
+      "class": "16 anos",
+      "tempo": "2h 38 min",
       "sessoes": {
         "seg": {
           "sala 1": {
@@ -221,22 +144,22 @@
           }
         }
       },
-      "estreia": "13/03/2023",
+      "estreia": "23/11/2023",
       "pre-estreia": "true",
-      "direcao": "Greta Gerwig",
-      "roteiro": "Greta Gerwig, Noah Baumbach",
-      "atores": "Margot Robbie, Ryan Gosling, Issa Rae",
-      "genero": "AVENTURA/COMÉDIA/FANTASIA",
-      "imdb": "7,5",
+      "direcao": "Ridley Scott",
+      "roteiro": "David Scarpa",
+      "atores": "Joaquin Phoenix, Vanessa Kirby, Tahar Rahim",
+      "genero": "DRAMA/HISTÓRIA/GUERRA",
+      "imdb": "6,5",
       "fim": "20/03/2024",
       "uuid": "7f5ac1bd-7071-43db-8b02-d2ef98e0fcfe"
     },
-    "ba4a7ea9-d831-4d04-89ec-49ea4d54cd1a": {
-      "titulo": "Asteroid City",
-      "sinopse": "ASTEROID CITY é uma meditação poética sobre o sentido da vida. Ele conta a história de uma cidade fictícia do deserto americano por volta de 1955 e sua convenção Junior Stargazer, que reúne alunos e pais de todo o país para competição acadêmica, descanso/recreação, comédia, drama, romance e muito mais.",
-      "trailer": "0TPFqmbnHNk",
-      "class": "13 anos",
-      "tempo": "1h 45min",
+	"3b7efcd7-5e5c-498e-b3ae-819685160c81": {
+      "titulo": "As Marvels",
+      "sinopse": "Quando suas obrigações a levam a uma fenda espacial anômala ligada a um revolucionário Kree, os poderes de Carol Danvers, a Capitã Marvel, se entrelaçam aos de Kamala Khan, a Ms. Marvel, e aos da sobrinha de Carol, astronauta da S.A.B.E.R., Capitã Monica Rambeau. Juntas, esse trio improvável deve ser unir para salvar o universo como 'As Marvels'.",
+      "trailer": "eAWt5hqJHmA",
+      "class": "12 anos",
+      "tempo": "1h 45 min",
       "sessoes": {
         "seg": {
           "sala 1": {
@@ -298,22 +221,99 @@
           }
         }
       },
-      "estreia": "11/03/2024",
+      "estreia": "28/11/2023",
       "pre-estreia": "true",
-      "direcao": "Wes Anderson",
-      "roteiro": "Wes Anderson, Roman Coppola",
-      "atores": "Jason Schwartzman, Scarlett Johansson, Tom Hanks",
-      "genero": "COMÉDIA/DRAMA/ROMANCE",
-      "imdb": "6,8",
+      "direcao": "Nia DaCosta",
+      "roteiro": "Nia DaCosta, Megan McDonnell, Elissa Karasik",
+      "atores": "Brie Larson, Teyonah Parris, Iman Vellani",
+      "genero": "FICÇÃO/AÇÃO/AVENTURA",
+      "imdb": "6,6",
+      "fim": "20/03/2024",
+      "uuid": "3b7efcd7-5e5c-498e-b3ae-819685160c81"
+    },
+    "ba4a7ea9-d831-4d04-89ec-49ea4d54cd1a": {
+      "titulo": "As Aventuras de Poliana: O Filme",
+      "sinopse": "Poliana e seus amigos vão precisar definir o que farão agora que se formaram no ensino médio. A jovem quer cursar uma faculdade no exterior, porém Otto não permite que a filha estude fora do país por não achar que ela seja madura o suficiente. Para tentar realizar seu sonho, Poliana tem uma ideia: trabalhar no Maya Palace, um resort paradisíaco à beira-mar, para provar sua independência. Ela leva o namorado, João, e os amigos Kessya e Luigi, que topam ir junto. Porém, nada no hotel é o que parece ser, e Poliana e seus amigos viverão muitas aventuras em uma jornada de autodescoberta e amadurecimento.",
+      "trailer": "0TPFqmbnHNk",
+      "class": "livre",
+      "tempo": "?",
+      "sessoes": {
+        "seg": {
+          "sala 1": {
+            "horarios": ["20:30", "21:45"],
+            "tipo": "3d",
+            "audio": "leg"
+          },
+          "sala 2": {
+            "horarios": ["19:30"],
+            "tipo": "2d",
+            "audio": "dub"
+          }
+        },
+        "ter": {
+          "sala 3": {
+            "horarios": ["17:30", "19:00"],
+            "tipo": "3d",
+            "audio": "dub"
+          }
+        },
+        "qua": {
+          "sala 1": {
+            "horarios": ["20:00"],
+            "tipo": "2d",
+            "audio": "leg"
+          }
+        },
+        "qui": {
+          "sala 2": {
+            "horarios": ["19:30", "22:00"],
+            "tipo": "3d",
+            "audio": "leg"
+          },
+          "sala 3": {
+            "horarios": ["17:00"],
+            "tipo": "2d",
+            "audio": "dub"
+          }
+        },
+        "sex": {
+          "sala 1": {
+            "horarios": ["21:30"],
+            "tipo": "3d",
+            "audio": "leg"
+          }
+        },
+        "sab": {
+          "sala 2": {
+            "horarios": ["20:30"],
+            "tipo": "2d",
+            "audio": "leg"
+          }
+        },
+        "dom": {
+          "sala 1": {
+            "horarios": ["18:30", "22:30"],
+            "tipo": "3d",
+            "audio": "dub"
+          }
+        }
+      },
+      "estreia": "30/11/2023",
+      "pre-estreia": "true",
+      "direcao": "André Pellenz",
+      "roteiro": "?",
+      "atores": "Sophia Valverde, Ígor Jansen, Duda Pimenta",
+      "genero": "COMÉDIA/AVENTURA",
+      "imdb": "?",
       "fim": "20/03/2024",
       "uuid": "ba4a7ea9-d831-4d04-89ec-49ea4d54cd1a"
     },
     "4f580f85-af25-42d5-ba1b-8e8481fc1442": {
-      "titulo": "Missão: Impossível – Acerto De Contas Parte 1",
-      "sinopse": "Ethan Hunt e seu grupo do IMF embarcam na missão mais arriscada até agora: localizar uma nova arma aterrorizante que ameaça toda a humanidade antes que caia nas mãos erradas.",
+      "titulo": "Wonka",
+      "sinopse": "Um jovem Willy Wonka embarca em uma missão para espalhar alegria por meio de seu chocolate, que rapidamente se torna um fenômeno.",
       "trailer": "94ceNwopotk",
-      "class": "14 anos",
-      "tempo": "2h 43min",
+      "class": "livre",
+      "tempo": "1h 57min",
       "sessoes": {
         "seg": {
           "sala 1": {
@@ -375,15 +375,92 @@
           }
         }
       },
-      "estreia": "12/07/2023",
+      "estreia": "14/12/2023",
       "pre-estreia": "false",
-      "direcao": "Christopher McQuarrie",
-      "roteiro": "Bruce Geller, Erik Jendresen, Christopher McQuarrie",
-      "atores": "Tom Cruise, Hayley Atwell, Ving Rhames",
-      "genero": "AÇÃO/AVENTURA/SUSPENSE",
-      "imdb": "8,0",
+      "direcao": "Paul King",
+      "roteiro": "Paul King, Simon Farnaby",
+      "atores": "Timothée Chalamet, Calah Lane, Keegan-Michael Key",
+      "genero": "COMÉDIA/FAMÍLIA/FANTASIA",
+      "imdb": "?",
       "fim": "20/03/2024",
       "uuid": "4f580f85-af25-42d5-ba1b-8e8481fc1442"
+    },
+    "18d0b1b2-2780-4829-8590-f9d04cde3435": {
+      "titulo": "Aquaman 2: O Reino Perdido",
+      "sinopse": "Quando um poder antigo é liberado, Aquaman deve forjar uma aliança inquieta com um aliado improvável para proteger Atlântida, e o mundo, de uma devastação irreversível.",
+      "trailer": "94ceNwopotk",
+      "class": "13 anos",
+      "tempo": "2h 4min",
+      "sessoes": {
+        "seg": {
+          "sala 1": {
+            "horarios": ["17:30", "18:30"],
+            "tipo": "3d",
+            "audio": "leg"
+          },
+          "sala 2": {
+            "horarios": ["19:30"],
+            "tipo": "2d",
+            "audio": "dub"
+          }
+        },
+        "ter": {
+          "sala 3": {
+            "horarios": ["19:00", "21:00"],
+            "tipo": "3d",
+            "audio": "dub"
+          }
+        },
+        "qua": {
+          "sala 1": {
+            "horarios": ["20:00"],
+            "tipo": "2d",
+            "audio": "leg"
+          }
+        },
+        "qui": {
+          "sala 2": {
+            "horarios": ["19:30", "22:00"],
+            "tipo": "3d",
+            "audio": "leg"
+          },
+          "sala 3": {
+            "horarios": ["17:00"],
+            "tipo": "2d",
+            "audio": "dub"
+          }
+        },
+        "sex": {
+          "sala 1": {
+            "horarios": ["21:30"],
+            "tipo": "3d",
+            "audio": "leg"
+          }
+        },
+        "sab": {
+          "sala 2": {
+            "horarios": ["20:30"],
+            "tipo": "2d",
+            "audio": "leg"
+          }
+        },
+        "dom": {
+          "sala 1": {
+            "horarios": ["18:30", "22:30"],
+            "tipo": "3d",
+            "audio": "dub"
+          }
+        }
+      },
+      "estreia": "20/12/2023",
+      "pre-estreia": "false",
+      "direcao": "James Wan",
+      "roteiro": "David Leslie, Johnson McGoldrick",
+      "atores": "Jason Momoa, Patrick Wilson, Amber Heard",
+      "genero": "AÇÃO/AVENTURA/FANTASIA",
+      "imdb": "?",
+      "fim": "20/03/2024",
+      "uuid": "18d0b1b2-2780-4829-8590-f9d04cde3435"
     }
   }
 }
