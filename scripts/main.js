@@ -31,7 +31,7 @@ function createCarouselItems(data) {
             img.classList.add('d-block', 'w-100');
 
             const carouselCaption = document.createElement('div');
-            carouselCaption.classList.add('carousel-caption');
+            carouselCaption.classList.add('carousel-caption','container','mt-4');
 
             const h1 = document.createElement('h1');
             h1.textContent = filme.titulo;
@@ -133,7 +133,7 @@ let filmesData; // Variável global para armazenar os dados do JSON
 // Function to generate the HTML for each filme for a specific dia and sala
 function generateFilmeElement(filme, dia) {
     const filmeElement = document.createElement("div");
-    filmeElement.className = "filme";
+    filmeElement.className = "filme container mt-4";
 
     filmeElement.innerHTML = `
             <div class="filme-header">

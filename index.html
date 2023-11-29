@@ -68,15 +68,15 @@
 </section>
 
 <section> <!-- programação -->
-    <h1 class="pd45" id="prog">Programa&ccedil;&atilde;o Completa</h1>
-    <div class="date-carousel" id="dateCarousel">
+    <h1 class="pd45 container mt-4" id="prog">Programa&ccedil;&atilde;o Completa</h1>
+    <div class="date-carousel container mt-4" id="dateCarousel">
         <div class="d-flex overflow-auto flex-nowrap">
             <button class="date-button mobile-hide" onclick="changeDate(-1)">
             <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">
                 <path d="M28.82 33.18L19.66 24L28.82 14.82L26 12L14 24L26 36L28.82 33.18Z" fill="#F8EBFF"/>
                 <path d="M2 22C2 10.9543 10.9543 2 22 2H24C35.0457 2 44 10.9543 44 22V24C44 35.0457 35.0457 44 24 44H22C10.9543 44 2 35.0457 2 24V22Z" stroke="#F8EBFF" stroke-width="4"/>
             </svg>
-        </button>
+            </button>
             <button class="date-item numero active" onclick="selectDate(0)"></button>
             <button class="date-item numero" onclick="selectDate(1)"></button>
             <button class="date-item numero" onclick="selectDate(2)"></button>
@@ -96,20 +96,22 @@
 </section>
 
 <section> <!-- em breve -->
-    <h1 id="em-breve" class="pd45">Em Breve</h1>
-    <div class="d-flex overflow-auto flex-nowrap cartazes" id="em-breve-elements"></div>
+    <div class="container mt-4">
+        <h1 id="em-breve">Em Breve</h1>
+        <div class="d-flex overflow-auto flex-nowrap cartazes" id="em-breve-elements"></div>
+    </div>
 </section>
 
 <section> <!-- faq -->
-    <h1 class="pd45">Perguntas frequentes</h1>
     <div class="container mt-4">
+        <h1 style="padding-bottom: 16px">Perguntas frequentes</h1>
         <div class="accordion" id="accordionExample"></div>
     </div>
 </section>
 
 <section>  <!-- sobre -->
     <div class="sobre" id="sobre">
-        <div class="carousel-caption">
+        <div class="carousel-caption container mt-4">
             <h1>Sobre o Cinema</h1>
             <p>Equipado com a mais alta tecnologia, o Cine Teatro Mat&atilde;o possui o melhor equipamento para filmes em 2D e 3D de nossa regi&atilde;o; com salas confort&aacute;veis e ambiente climatizado proporcionam mais emo&ccedil;&atilde;o e entretenimento durante a apresenta&ccedil;&atilde;o.</p>
             <p> Inaugurado em 27 de agosto de 2003 com capacidade para 312 lugares, o Cine Teatro Mat&atilde;o possui uma s&eacute;rie de vantagens para o telespectador.</p>
@@ -119,7 +121,7 @@
 </section>
 
 <footer> <!-- footer -->
-    <div class="container" id="contato">
+    <div class="container mt-4" id="contato">
         <div class="row">
             <div class="col-sm-6 col-xs-12">
                 <img src="images/logo.png" alt="Logo Cine Teatro Matão">

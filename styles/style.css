@@ -226,7 +226,7 @@ header {
 
 .cartazes {
   margin: 16px auto;
-  padding: 16px 45px;
+  padding: 16px 0;
   left: 43px;
 }
 
@@ -309,7 +309,7 @@ header {
   }
   .cartazes {
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 0;
   }
   .cartaz .pre-estreia {
     width: 130px;
