@@ -723,9 +723,12 @@ svg:hover {
 }
 
 .modal {
-  --bs-modal-width: 80%;
   --bs-modal-bg: #28166D;
   --bs-modal-header-border-color: #28166D;
+}
+
+.modal-body {
+  padding: 32px;
 }
 
 @media (max-width: 767px) {
@@ -749,4 +752,15 @@ svg:hover {
 .openModal:hover {
   opacity: 80%;
   transition: 200ms;
+}
+
+.modal.fade .modal-dialog {
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+
+.modal.in .modal-dialog {
+
 }
