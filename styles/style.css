@@ -271,6 +271,26 @@ header {
   padding: 16px 16px;
 }
 
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.img-cartaz {
+  display: block;
+  width: 100%; /* Ensure the image takes the full width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.cartaz-detalhes {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 10px;
+}
+
 .sobre {
   position: relative;
   width: 100vw;
@@ -752,8 +772,22 @@ svg:hover {
   }
 }
 
-.openModal:hover {
-  opacity: 80%;
+.openModal:hover img {
+  opacity: 60%;
+  transition: 200ms;
+}
+
+a.openModal:hover {
+  opacity: 60%;
+  transition: 200ms;
+}
+
+.cartaz-detalhes {
+  visibility: hidden;
+}
+
+.openModal:hover .cartaz-detalhes {
+  visibility: visible;
   transition: 200ms;
 }
 

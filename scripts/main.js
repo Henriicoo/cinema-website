@@ -243,14 +243,16 @@ function createFutureFilmElements() {
 
     for (const filme of futureFilmes) {
         const filmElement = document.createElement("a");
-        filmElement.className = "openModal";
         filmElement.setAttribute('data-bs-toggle',"modal")
         filmElement.setAttribute('data-bs-target',"#infoModal")
         filmElement.setAttribute('data-bs-uuid',filme.uuid)
 
         filmElement.innerHTML = `
             <div class="cartaz">
-                <img src="images/${filme.uuid}_poster.jpg" alt="Poster de ${filme.titulo}" class="img-cartaz">
+                <div class="image-container openModal">
+                    <img src="images/${filme.uuid}_poster.jpg" alt="Poster de ${filme.titulo}" class="img-cartaz">
+                    <p class="cartaz-detalhes">ver detalhes</p>
+                </div>
                 ${filme["pre-estreia"] ? '<div class="pre-estreia"><p><bold>PR&Eacute;-ESTREIA DISPON&Iacute;VEL</bold></p></div>' : ''}
                 <h2 class="cartaz-texto titulo">${filme.titulo}</h2>
                 <h2 class="cartaz-texto">${filme.estreia}</h2>
