@@ -180,14 +180,14 @@ function generateSessionHTML(sessoes) {
         const horarios = sessoes[sala].horarios
             .map((horario) => `<span class="numero">${horario}</span>`)
             .join("");
-        const tipoAudio = `<span class="p18 esp uppr">${sessoes[sala].tipo} ${sessoes[sala].audio}</span>`;
+        const tipoAudio = `<span class="p18 esp uppr block-text">${sessoes[sala].tipo} ${sessoes[sala].audio}</span>`;
         sessionHTML += `
       <div class="sessao">
         <div class="sessao-head">
-            <span class="p18 sala capt">${sala}</span>
+            <span class="p18 sala capt block-text">${sala}</span>
             ${tipoAudio}
         </div>
-        <div class="horarios">${horarios}</div>
+        <div class="horarios block-text">${horarios}</div>
       </div>
     `;
     }
@@ -253,7 +253,7 @@ function createFutureFilmElements() {
                     <img src="images/${filme.uuid}_poster.jpg" alt="Poster de ${filme.titulo}" class="img-cartaz">
                     <p class="cartaz-detalhes">ver detalhes</p>
                 </div>
-                ${filme["pre-estreia"] ? '<div class="pre-estreia"><p><bold>PR&Eacute;-ESTREIA DISPON&Iacute;VEL</bold></p></div>' : ''}
+                ${filme["pre-estreia"] ? '<div class="pre-estreia block-text"><p><bold>PR&Eacute;-ESTREIA DISPON&Iacute;VEL</bold></p></div>' : ''}
                 <h2 class="cartaz-texto titulo">${filme.titulo}</h2>
                 <h2 class="cartaz-texto">${filme.estreia}</h2>
             </div>
@@ -340,11 +340,5 @@ if (infoModal) {
                 <iframe style="display: block; margin-left: auto; margin-right: 0;" width="420" height="315" src="https://www.youtube-nocookie.com/embed/${filme.trailer}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         `;
-        
-        const modalTitle = infoModal.querySelector('.modal-title')
-        const modalBodyInput = infoModal.querySelector('.modal-body input')
-
-        modalTitle.textContent = `New message to ${recipient}`
-        modalBodyInput.value = recipient
     })
 }

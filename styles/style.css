@@ -805,3 +805,10 @@ a.openModal:hover {
 .modal.in .modal-dialog {
 
 }
+
+.block-text,
+.cartaz-detalhes {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
