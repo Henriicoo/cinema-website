@@ -8,61 +8,51 @@
       "tempo": "2h 37 min",
       "sessoes": {
         "seg": {
-          "sala 1": {
-            "horarios": ["19:00", "20:30"],
-            "tipo": "3d",
-            "audio": "leg"
-          },
           "sala 2": {
-            "horarios": ["16:00"],
+            "horarios": ["21:00"],
             "tipo": "2d",
             "audio": "dub"
           }
         },
         "ter": {
-          "sala 3": {
-            "horarios": ["18:00", "21:30"],
-            "tipo": "3d",
+          "sala 2": {
+            "horarios": ["21:00"],
+            "tipo": "2d",
             "audio": "dub"
           }
         },
         "qua": {
-          "sala 1": {
-            "horarios": ["20:00"],
+          "sala 2": {
+            "horarios": ["21:00"],
             "tipo": "2d",
-            "audio": "leg"
+            "audio": "dub"
           }
         },
         "qui": {
           "sala 2": {
-            "horarios": ["19:30", "22:00"],
-            "tipo": "3d",
-            "audio": "leg"
-          },
-          "sala 3": {
-            "horarios": ["17:00"],
+            "horarios": ["21:00"],
             "tipo": "2d",
             "audio": "dub"
           }
         },
         "sex": {
-          "sala 1": {
-            "horarios": ["21:30"],
-            "tipo": "3d",
-            "audio": "leg"
+          "sala 2": {
+            "horarios": ["21:00"],
+            "tipo": "2d",
+            "audio": "dub"
           }
         },
         "sab": {
           "sala 2": {
-            "horarios": ["20:30"],
+            "horarios": ["21:00"],
             "tipo": "2d",
-            "audio": "leg"
+            "audio": "dub"
           }
         },
         "dom": {
-          "sala 1": {
-            "horarios": ["18:30", "22:30"],
-            "tipo": "3d",
+          "sala 2": {
+            "horarios": ["21:00"],
+            "tipo": "2d",
             "audio": "dub"
           }
         }
@@ -86,60 +76,50 @@
       "sessoes": {
         "seg": {
           "sala 1": {
-            "horarios": ["16:30", "19:00"],
-            "tipo": "3d",
-            "audio": "leg"
-          },
-          "sala 2": {
-            "horarios": ["19:30"],
+            "horarios": ["21:00"],
             "tipo": "2d",
             "audio": "dub"
           }
         },
         "ter": {
-          "sala 3": {
-            "horarios": ["19:30", "21:00"],
-            "tipo": "3d",
+          "sala 1": {
+            "horarios": ["21:00"],
+            "tipo": "2d",
             "audio": "dub"
           }
         },
         "qua": {
           "sala 1": {
-            "horarios": ["20:00"],
+            "horarios": ["21:00"],
             "tipo": "2d",
-            "audio": "leg"
+            "audio": "dub"
           }
         },
         "qui": {
-          "sala 2": {
-            "horarios": ["19:30", "22:00"],
-            "tipo": "3d",
-            "audio": "leg"
-          },
-          "sala 3": {
-            "horarios": ["17:00"],
+          "sala 1": {
+            "horarios": ["21:00"],
             "tipo": "2d",
             "audio": "dub"
           }
         },
         "sex": {
           "sala 1": {
-            "horarios": ["21:30"],
-            "tipo": "3d",
-            "audio": "leg"
+            "horarios": ["21:00"],
+            "tipo": "2d",
+            "audio": "dub"
           }
         },
         "sab": {
-          "sala 2": {
-            "horarios": ["20:30"],
+          "sala 1": {
+            "horarios": ["21:00"],
             "tipo": "2d",
-            "audio": "leg"
+            "audio": "dub"
           }
         },
         "dom": {
           "sala 1": {
-            "horarios": ["18:30", "22:30"],
-            "tipo": "3d",
+            "horarios": ["21:00"],
+            "tipo": "2d",
             "audio": "dub"
           }
         }
@@ -162,61 +142,51 @@
       "tempo": "1h 45 min",
       "sessoes": {
         "seg": {
-          "sala 1": {
-            "horarios": ["20:30", "21:45"],
-            "tipo": "3d",
-            "audio": "leg"
-          },
           "sala 2": {
-            "horarios": ["19:30"],
+            "horarios": ["19:00"],
             "tipo": "2d",
             "audio": "dub"
           }
         },
         "ter": {
-          "sala 3": {
-            "horarios": ["17:30", "19:00"],
-            "tipo": "3d",
+          "sala 2": {
+            "horarios": ["19:00"],
+            "tipo": "2d",
             "audio": "dub"
           }
         },
         "qua": {
-          "sala 1": {
-            "horarios": ["20:00"],
+          "sala 2": {
+            "horarios": ["19:00"],
             "tipo": "2d",
-            "audio": "leg"
+            "audio": "dub"
           }
         },
         "qui": {
           "sala 2": {
-            "horarios": ["19:30", "22:00"],
-            "tipo": "3d",
-            "audio": "leg"
-          },
-          "sala 3": {
-            "horarios": ["17:00"],
+            "horarios": ["19:00"],
             "tipo": "2d",
             "audio": "dub"
           }
         },
         "sex": {
-          "sala 1": {
-            "horarios": ["21:30"],
-            "tipo": "3d",
-            "audio": "leg"
+          "sala 2": {
+            "horarios": ["19:00"],
+            "tipo": "2d",
+            "audio": "dub"
           }
         },
         "sab": {
           "sala 2": {
-            "horarios": ["20:30"],
+            "horarios": ["19:00"],
             "tipo": "2d",
-            "audio": "leg"
+            "audio": "dub"
           }
         },
         "dom": {
-          "sala 1": {
-            "horarios": ["18:30", "22:30"],
-            "tipo": "3d",
+          "sala 2": {
+            "horarios": ["19:00"],
+            "tipo": "2d",
             "audio": "dub"
           }
         }
@@ -233,68 +203,58 @@
     },
     "ba4a7ea9-d831-4d04-89ec-49ea4d54cd1a": {
       "titulo": "As Aventuras de Poliana: O Filme",
-      "sinopse": "Poliana e seus amigos vão precisar definir o que farão agora que se formaram no ensino médio. A jovem quer cursar uma faculdade no exterior, porém Otto não permite que a filha estude fora do país por não achar que ela seja madura o suficiente. Para tentar realizar seu sonho, Poliana tem uma ideia: trabalhar no Maya Palace, um resort paradisíaco à beira-mar, para provar sua independência. Ela leva o namorado, João, e os amigos Kessya e Luigi, que topam ir junto. Porém, nada no hotel é o que parece ser, e Poliana e seus amigos viverão muitas aventuras em uma jornada de autodescoberta e amadurecimento.",
+      "sinopse": "Poliana termina o ensino médio e inicia sua busca pela independência. Seu pai, Otto, acredita que ela não está pronta. Poliana sugere trabalhar em um resort de luxo para mostrar que tem maturidade para estudar no exterior. Em colaboração com o SBT – Poliana é uma das novelas do SBT mais assistidas nos últimos 15 anos.",
       "trailer": "0TPFqmbnHNk",
       "class": "livre",
-      "tempo": "?",
+      "tempo": "1h 33min",
       "sessoes": {
         "seg": {
           "sala 1": {
-            "horarios": ["20:30", "21:45"],
-            "tipo": "3d",
-            "audio": "leg"
-          },
-          "sala 2": {
-            "horarios": ["19:30"],
+            "horarios": ["19:00"],
             "tipo": "2d",
-            "audio": "dub"
+            "audio": "por"
           }
         },
         "ter": {
-          "sala 3": {
-            "horarios": ["17:30", "19:00"],
-            "tipo": "3d",
-            "audio": "dub"
+          "sala 1": {
+            "horarios": ["19:00"],
+            "tipo": "2d",
+            "audio": "por"
           }
         },
         "qua": {
           "sala 1": {
-            "horarios": ["20:00"],
+            "horarios": ["19:00"],
             "tipo": "2d",
-            "audio": "leg"
+            "audio": "por"
           }
         },
         "qui": {
-          "sala 2": {
-            "horarios": ["19:30", "22:00"],
-            "tipo": "3d",
-            "audio": "leg"
-          },
-          "sala 3": {
-            "horarios": ["17:00"],
+          "sala 1": {
+            "horarios": ["19:00"],
             "tipo": "2d",
-            "audio": "dub"
+            "audio": "por"
           }
         },
         "sex": {
           "sala 1": {
-            "horarios": ["21:30"],
-            "tipo": "3d",
-            "audio": "leg"
+            "horarios": ["19:00"],
+            "tipo": "2d",
+            "audio": "por"
           }
         },
         "sab": {
-          "sala 2": {
-            "horarios": ["20:30"],
+          "sala 1": {
+            "horarios": ["17:00", "19:00"],
             "tipo": "2d",
-            "audio": "leg"
+            "audio": "por"
           }
         },
         "dom": {
           "sala 1": {
-            "horarios": ["18:30", "22:30"],
-            "tipo": "3d",
-            "audio": "dub"
+            "horarios": ["17:00", "19:00"],
+            "tipo": "2d",
+            "audio": "por"
           }
         }
       },
