@@ -1,7 +1,7 @@
 {
   "1":{
     "pergunta": "Qual é o horário de funcionamento da bilheteria?",
-    "resposta": "A bilheteria do cinema fica aberta das 17h até às meia noite."
+    "resposta": "A bilheteria do cinema fica aberta das 17h até as meia noite."
   },
   "2": {
     "pergunta": "Qual os valores do ingresso?",
@@ -9,6 +9,6 @@
   },
   "3": {
     "pergunta": "É possível locar o cinema para eventos?",
-    "resposta": "Essa eu nao sei mesmo preciso ver depois....."
+    "resposta": "Entre em contato conosco via telefone ou e-mail para mais informações."
   }
 }
