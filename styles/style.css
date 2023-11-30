@@ -184,7 +184,7 @@ header {
   text-align: left;
   z-index: 2;
   padding: 45px;
-  right: 35%;
+  right: 30%;
 }
 
 /* Estilo para a cor do ícone ao passar o mouse */
@@ -720,4 +720,28 @@ svg:hover {
 .accordion-button::after,
 .accordion-button:not(.collapsed)::after {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23F8EBFF'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.modal {
+  --bs-modal-width: 80%;
+  --bs-modal-bg: #28166D;
+  --bs-modal-header-border-color: #28166D;
+}
+
+@media (max-width: 767px) {
+  .info-desktop {
+    visibility: hidden;
+  }
+  .info-mobile {
+    visibility: visible;
+  }
+}
+
+@media (min-width: 768px) {
+  .info-desktop {
+    visibility: visible;
+  }
+  .info-mobile {
+    visibility: hidden;
+  }
 }

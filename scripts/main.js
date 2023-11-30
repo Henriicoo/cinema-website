@@ -143,12 +143,17 @@ function generateFilmeElement(filme, dia) {
                         <path d="M11.25 6.27621H13.75V8.77621H11.25V6.27621ZM11.25 11.2762H13.75V18.7762H11.25V11.2762ZM12.5 0.0262146C5.6 0.0262146 0 5.62621 0 12.5262C0 19.4262 5.6 25.0262 12.5 25.0262C19.4 25.0262 25 19.4262 25 12.5262C25 5.62621 19.4 0.0262146 12.5 0.0262146ZM12.5 22.5262C6.9875 22.5262 2.5 18.0387 2.5 12.5262C2.5 7.01371 6.9875 2.52621 12.5 2.52621C18.0125 2.52621 22.5 7.01371 22.5 12.5262C22.5 18.0387 18.0125 22.5262 12.5 22.5262Z" fill="#F8EBFF"/>
                     </svg>
                 </a>
+                <a class="info-desktop" data-bs-toggle="modal" data-bs-target="#infoModal" data-bs-uuid="${filme.uuid}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 25" fill="none">
+                        <path d="M11.25 6.27621H13.75V8.77621H11.25V6.27621ZM11.25 11.2762H13.75V18.7762H11.25V11.2762ZM12.5 0.0262146C5.6 0.0262146 0 5.62621 0 12.5262C0 19.4262 5.6 25.0262 12.5 25.0262C19.4 25.0262 25 19.4262 25 12.5262C25 5.62621 19.4 0.0262146 12.5 0.0262146ZM12.5 22.5262C6.9875 22.5262 2.5 18.0387 2.5 12.5262C2.5 7.01371 6.9875 2.52621 12.5 2.52621C18.0125 2.52621 22.5 7.01371 22.5 12.5262C22.5 18.0387 18.0125 22.5262 12.5 22.5262Z" fill="#F8EBFF"/>
+                    </svg>
+                </a>
             </div>
             <div class="collapse" id="${filme.uuid}">
                 <div class="card card-body text-center" style="background-color: #1A0E46">
                     <span class="small">${filme.tempo} &bull; CLASS. ${filme.class} &bull; EM CARTAZ AT&Eacute; ${filme.fim}</span>
                     <p>${filme.sinopse}</p>
-                    <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/${filme.trailer}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width=100% src="https://www.youtube-nocookie.com/embed/${filme.trailer}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     <span class="small">MAIS INFORMA&Ccedil;&Otilde;ES:</span>
                     <span class="small"><bold>DIRE&Ccedil;&Atilde;O:</bold> ${filme.direcao} | <bold>ROTEIRO:</bold> ${filme.roteiro} | <bold>ATORES:</bold> ${filme.atores} | <bold>G&Ecirc;NERO:</bold> ${filme.genero} | <bold>IMDB:</bold> ${filme.imdb}</span>
                 </div>
@@ -308,3 +313,34 @@ fetch('faq.json')
         }
     })
     .catch(error => console.error('Error fetching FAQ JSON:', error));
+
+// update modal
+const infoModal = document.getElementById('infoModal')
+if (infoModal) {
+    infoModal.addEventListener('show.bs.modal', event => {
+        const button = event.relatedTarget
+        const uuid = button.getAttribute('data-bs-uuid')
+
+        let info = document.getElementById("filmeInfoModal")
+        let filme = filmesData[uuid];
+
+        info.innerHTML = `
+            <div class="col" style="max-width: 570px;">
+                <h1>${filme.titulo}</h1>
+                <p class="small">${filme.tempo} &bull; CLASS. ${filme.class} &bull; EM CARTAZ AT&Eacute; ${filme.fim}</p>
+                <p>${filme.sinopse}</p>
+                <span class="small">MAIS INFORMA&Ccedil;&Otilde;ES:</span><br>
+                    <span class="small"><bold>DIRE&Ccedil;&Atilde;O:</bold> ${filme.direcao} | <bold>ROTEIRO:</bold> ${filme.roteiro} | <bold>ATORES:</bold> ${filme.atores} | <bold>G&Ecirc;NERO:</bold> ${filme.genero} | <bold>IMDB:</bold> ${filme.imdb}</span>
+            </div>
+            <div class="col">
+                <iframe width="420" height="315" src="https://www.youtube-nocookie.com/embed/${filme.trailer}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        `;
+        
+        const modalTitle = infoModal.querySelector('.modal-title')
+        const modalBodyInput = infoModal.querySelector('.modal-body input')
+
+        modalTitle.textContent = `New message to ${recipient}`
+        modalBodyInput.value = recipient
+    })
+}
