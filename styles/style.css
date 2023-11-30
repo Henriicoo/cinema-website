@@ -92,6 +92,10 @@ p {
   text-transform: uppercase;
 }
 
+img {
+  pointer-events: none;
+}
+
 .gradient-background {
   position: fixed;
   top: 0;
