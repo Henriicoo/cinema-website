@@ -499,6 +499,9 @@ header {
     margin: 0;
     padding: 0;
   }
+  .sobre {
+    background-image: linear-gradient(rgba(40, 22, 109, 0.7), rgba(40, 22, 109, 0.7)), url('../images/cinema.jpg');
+  }
 }
 
 footer {
