@@ -698,12 +698,12 @@ svg:hover {
 
 .accordion {
   padding-bottom: 45px;
+  --bs-accordion-bg: #28166d;
 }
 
 .accordion-header, .accordion-button {
   font-weight: 500;
   font-size: 20px;
-  background-color: #28166d;
   color: #F8EBFF;
 }
 
