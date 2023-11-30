@@ -745,3 +745,8 @@ svg:hover {
     visibility: hidden;
   }
 }
+
+.openModal:hover {
+  opacity: 80%;
+  transition: 200ms;
+}
