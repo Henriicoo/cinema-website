@@ -103,7 +103,7 @@ if (filmModal) {
                     <div class="row">
                         <div class="col-8">
                             <div class="form-floating">
-                                <input value="${filme.titulo}" style="overflow: hidden" class="form-control" placeholder=" " id="titulo">
+                                <input value="${filme.titulo}" class="form-control" placeholder=" " id="titulo">
                                 <label for="titulo">T&iacute;tulo</label>
                             </div>
                         </div>
@@ -126,25 +126,32 @@ if (filmModal) {
                         <span class="small">sobre o filme</span>
                         <div class="col-2">
                             <div class="form-floating">
-                                <input value="${filme.tempo}" style="overflow: hidden" class="form-control" placeholder=" " id="tmp"></textarea>
+                                <input value="${filme.tempo}" class="form-control" placeholder=" " id="tmp"></textarea>
                                 <label for="tmp">Dura&ccedil;&atilde;o</label>
                             </div>
                         </div>
                         <div class="col-5">
                             <div class="form-floating">
-                                <input value="${filme.genero}" style="overflow: hidden" class="form-control" placeholder=" " id="gen"></textarea>
+                                <input value="${filme.genero}" class="form-control" placeholder=" " id="gen"></textarea>
                                 <label for="gen">G&ecirc;nero</label>
                             </div>
                         </div>
                         <div class="col-3">
                             <div class="form-floating">
-                                <input value="${filme.class}" style="overflow: hidden" class="form-control" placeholder=" " id="clas"></textarea>
+                                <select class="form-select" id="clas">
+                                    <option selected>Livre</option>
+                                    <option value="1">10 anos</option>
+                                    <option value="2">12 anos</option>
+                                    <option value="3">14 anos</option>
+                                    <option value="4">16 anos</option>
+                                    <option value="5">18 anos</option>
+                                </select>
                                 <label for="clas">Classifica&ccedil;&atilde;o</label>
                             </div>
                         </div>
                         <div class="col-2">
                             <div class="form-floating">
-                                <input value="${filme.imdb}" style="overflow: hidden" class="form-control" placeholder=" " id="imdb"></textarea>
+                                <input value="${filme.imdb}" class="form-control" placeholder=" " id="imdb"></textarea>
                                 <label for="imdb">IMDb</label>
                             </div>
                         </div>
@@ -153,25 +160,25 @@ if (filmModal) {
                     <div class="row g-2">
                         <div class="col-6">
                             <div class="form-floating">
-                                <input value="${filme.direcao}" style="overflow: hidden" class="form-control" placeholder=" " id="dir"></textarea>
+                                <input value="${filme.direcao}" class="form-control" placeholder=" " id="dir"></textarea>
                                 <label for="dir">Dire&ccedil;&atilde;o</label>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="form-floating">
-                                <input value="${filme.roteiro}" style="overflow: hidden" class="form-control" placeholder=" " id="rot"></textarea>
+                                <input value="${filme.roteiro}" class="form-control" placeholder=" " id="rot"></textarea>
                                 <label for="rot">Roteiro</label>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="form-floating">
-                                <input value="${filme.atores}" style="overflow: hidden" class="form-control" placeholder=" " id="atr"></textarea>
+                                <input value="${filme.atores}" class="form-control" placeholder=" " id="atr"></textarea>
                                 <label for="atr">Atores</label>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="form-floating">
-                                <input value="${filme.trailer}" style="overflow: hidden" class="form-control" placeholder=" " id="trl"></textarea>
+                                <input value="${filme.trailer}" class="form-control" placeholder=" " id="trl"></textarea>
                                 <label for="trl">Trailer</label>
                             </div>
                         </div>
@@ -207,35 +214,6 @@ if (filmModal) {
                         <div class="col">
                             <span class="small pd16">Imagem de Banner</span>
                             <input class="form-control" type="file" id="bannerFile">
-                        </div>
-                    </div>
-                </section>
-
-                <section>
-                    <h1>Sess&otilde;es</h1>
-                    <div class="d-flex overflow-auto flex-nowrap">
-                        <button class="dia-item numero active" onclick="changeEditDate(0)">DOM</button>
-                        <button class="dia-item numero" onclick="changeEditDate(1)">SEG</button>
-                        <button class="dia-item numero" onclick="changeEditDate(2)">TER</button>
-                        <button class="dia-item numero" onclick="changeEditDate(3)">QUA</button>
-                        <button class="dia-item numero" onclick="changeEditDate(4)">QUI</button>
-                        <button class="dia-item numero" onclick="changeEditDate(5)">SEX</button>
-                        <button class="dia-item numero" onclick="changeEditDate(6)">SAB</button>
-                    </div>
-                    <div class="edit-sessoes">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col align-self-start">
-                                    <div class="input-group">
-                                        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                                            <option selected>Escolha...</option>
-                                            <option value="1">Sala 1</option>
-                                            <option value="2">Sala 2</option>
-                                        </select>
-                                        <button class="btn btn-outline-secondary" type="button">Adicionar</button>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </section>

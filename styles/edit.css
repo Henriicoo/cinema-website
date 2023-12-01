@@ -23,6 +23,8 @@ section {
     border-radius: 45px 0 0 45px;
     font-weight: 700;
 }
+
+.form-select,
 .form-control {
     background-color: #F8EBFF;
     border: 2px solid #BAB0BF;
@@ -31,16 +33,14 @@ section {
     font-style: normal;
     font-weight: 500;
 }
+
 .form-control:focus {
     background-color: #FEF7FFFF;
 }
+
 label {
     font-weight: 500;
     color: #020024;
-    background-color: transparent;
-}
-label:focus {
-    border: none;
     background-color: transparent;
 }
 
@@ -51,6 +51,7 @@ label:focus {
     font-weight: 500;
     color: #f8ebff;
 }
+
 .btn:hover {
     background-color: rgba(84, 61, 178, 0.7);
     color: #F8EBFF;
@@ -60,6 +61,7 @@ label:focus {
     background-color: #F8EBFF;
     border-color: #BAB0BF;
 }
+
 .form-check-input:checked {
     background-color: #543DB2;
     border-color: #BAB0BF;
@@ -95,17 +97,6 @@ label:focus {
     padding: 16px;
 }
 
-.edit-sessoes {
-    background-color: #F8EBFF;
-    border-radius: 0 15px 15px 15px;
-    width: 90vw;
-    height: 500px;
-}
-
-.form-floating>label {
-    background-color: transparent;
-}
-
-label {
+.form-floating>.form-control-plaintext~label::after, .form-floating>.form-control:focus~label::after, .form-floating>.form-control:not(:placeholder-shown)~label::after, .form-floating>.form-select~label::after {
     background-color: transparent;
 }
