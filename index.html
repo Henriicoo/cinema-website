@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <link href="styles/style.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900">
+    <link rel="preconnect" href="https://www.youtube-nocookie.com/">
     <title>Cineteatro Matão</title>
 </head>
 
@@ -45,13 +46,13 @@
 <section> <!-- carrossel -->
     <div id="filmCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner" id="carouselInner"></div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#filmCarousel" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#filmCarousel" data-bs-slide="prev" aria-label="Mudar filme">
             <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">
                 <path d="M28.82 33.18L19.66 24L28.82 14.82L26 12L14 24L26 36L28.82 33.18Z" fill="#F8EBFF"/>
                 <path d="M2 22C2 10.9543 10.9543 2 22 2H24C35.0457 2 44 10.9543 44 22V24C44 35.0457 35.0457 44 24 44H22C10.9543 44 2 35.0457 2 24V22Z" stroke="#F8EBFF" stroke-width="4"/>
             </svg>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#filmCarousel" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#filmCarousel" data-bs-slide="next" aria-label="Mudar filme">
             <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">
                 <path d="M17 33.18L26.16 24L17 14.82L19.82 12L31.82 24L19.82 36L17 33.18Z" fill="#F8EBFF"/>
                 <path d="M2 22C2 10.9543 10.9543 2 22 2H24C35.0457 2 44 10.9543 44 22V24C44 35.0457 35.0457 44 24 44H22C10.9543 44 2 35.0457 2 24V22Z" stroke="#F8EBFF" stroke-width="4"/>
@@ -71,7 +72,7 @@
     <h1 class="pd45 container mt-4" id="prog">Programa&ccedil;&atilde;o Completa</h1>
     <div class="date-carousel container mt-4" id="dateCarousel">
         <div class="d-flex overflow-auto flex-nowrap">
-            <button class="date-button mobile-hide" onclick="changeDate(-1)">
+            <button class="date-button mobile-hide" onclick="changeDate(-1)" aria-label="Dia anterior">
             <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">
                 <path d="M28.82 33.18L19.66 24L28.82 14.82L26 12L14 24L26 36L28.82 33.18Z" fill="#F8EBFF"/>
                 <path d="M2 22C2 10.9543 10.9543 2 22 2H24C35.0457 2 44 10.9543 44 22V24C44 35.0457 35.0457 44 24 44H22C10.9543 44 2 35.0457 2 24V22Z" stroke="#F8EBFF" stroke-width="4"/>
@@ -84,7 +85,7 @@
             <button class="date-item numero" onclick="selectDate(4)"></button>
             <button class="date-item numero" onclick="selectDate(5)"></button>
             <button class="date-item numero" onclick="selectDate(6)"></button>
-            <button class="date-button mobile-hide" onclick="changeDate(1)">
+            <button class="date-button mobile-hide" onclick="changeDate(1)" aria-label="Dia posterior">
             <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">
                 <path d="M17 33.18L26.16 24L17 14.82L19.82 12L31.82 24L19.82 36L17 33.18Z" fill="#F8EBFF"/>
                 <path d="M2 22C2 10.9543 10.9543 2 22 2H24C35.0457 2 44 10.9543 44 22V24C44 35.0457 35.0457 44 24 44H22C10.9543 44 2 35.0457 2 24V22Z" stroke="#F8EBFF" stroke-width="4"/>
