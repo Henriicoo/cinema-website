@@ -1,4 +1,3 @@
-// BANNER
 async function fetchJsonData() {
     try {
         const response = await fetch('filmes.json');
@@ -9,7 +8,7 @@ async function fetchJsonData() {
     }
 }
 
-// Function to create the carousel items from JSON data
+// criar os itens do carrossel
 function createCarouselItems(data) {
     const carouselInner = document.getElementById('carouselInner');
     const today = new Date();
@@ -63,8 +62,6 @@ function createCarouselItems(data) {
         }
     }
 }
-
-// Load JSON data and create carousel items when the document is ready
 document.addEventListener('DOMContentLoaded', async () => {
     const jsonData = await fetchJsonData();
     
@@ -74,13 +71,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     createFutureFilmElements();
 });
 
-// DATAS ATUALIZADAS
-// Variables
 const dateItemsContainer = document.getElementById('dateCarousel');
 const dateItems = dateItemsContainer.querySelectorAll('.date-item');
 let currentDateIndex = 0;
 
-// Function to generate dates from today to the next 6 days
+// gerar os próximos dias
 function generateDates() {
     const today = new Date();
     for (let i = 0; i <= 6; i++) {
@@ -92,20 +87,14 @@ function generateDates() {
         dateItems[i].setAttribute('id',dayOfWeek)
     }
 }
-
-// Function to get the day of the week in Portuguese
 function getDayOfWeek(dayNumber) {
     const daysOfWeek = ["dom", "seg", "ter", "qua", "qui", "sex", "sab"];
     return daysOfWeek[dayNumber];
 }
-
-// Function to select a specific date
 function selectDate(index) {
     currentDateIndex = index;
     updateActiveDate();
 }
-
-// Function to change the date by navigating previous or next
 function changeDate(offset) {
     currentDateIndex += offset;
     if (currentDateIndex < 0) {
@@ -115,8 +104,6 @@ function changeDate(offset) {
     }
     updateActiveDate();
 }
-
-// Function to update the active date
 function updateActiveDate() {
     dateItems.forEach((item, index) => {
         item.classList.toggle('active', index === currentDateIndex);
@@ -124,13 +111,12 @@ function updateActiveDate() {
     createFilmesElements()
 }
 
-// Initial setup
 generateDates();
 updateActiveDate();
 
-let filmesData; // Variável global para armazenar os dados do JSON
+let filmesData;
 
-// Function to generate the HTML for each filme for a specific dia and sala
+// cria o elemento filme
 function generateFilmeElement(filme, dia) {
     const filmeElement = document.createElement("div");
     filmeElement.className = "filme container mt-4";
@@ -173,7 +159,7 @@ function generateFilmeElement(filme, dia) {
     return filmeElement;
 }
 
-// Function to generate the HTML for each sessao for a specific dia and sala
+// gera informações da sessão
 function generateSessionHTML(sessoes) {
     let sessionHTML = "";
     for (const sala in sessoes) {
@@ -193,15 +179,15 @@ function generateSessionHTML(sessoes) {
     }
     return sessionHTML;
 }
-// Função para adicionar os elementos filmes ao prog-box
+// adiciona os filmes à programação
 async function createFilmesElements() {
-    filmesData = await fetchJsonData(); // Utiliza a função fetchJsonData existente
+    filmesData = await fetchJsonData();
     if (!filmesData) return;
     
     const diaAtual = dateItems.item(currentDateIndex).id;
     
     const progBox = document.getElementById("prog-box");
-    progBox.innerHTML = ""; // Clear existing content before re-generating
+    progBox.innerHTML = "";
 
     const today = new Date();
     for (const filmeId in filmesData) {
@@ -218,13 +204,12 @@ async function createFilmesElements() {
     }
 }
 
+// cria elemento de filmes futuros
 function createFutureFilmElements() {
     const cartazesDiv = document.getElementById("em-breve-elements");
 
-    // Get today's date
     const today = new Date();
 
-    // Filter and sort the films based on "estreia" date
     const futureFilmes = Object.values(filmesData).filter(filme => {
         const inicioDateParts = filme.estreia.split("/");
         const inicioDate = new Date(inicioDateParts[2], inicioDateParts[1] - 1, inicioDateParts[0]);
@@ -236,8 +221,7 @@ function createFutureFilmElements() {
         const bInicioDate = new Date(bInicioDateParts[2], bInicioDateParts[1] - 1, bInicioDateParts[0]);
         return aInicioDate - bInicioDate;
     });
-
-    // Clear existing content before re-generating
+    
     cartazesDiv.innerHTML = "";
     let first = true;
 
@@ -271,6 +255,7 @@ function createFutureFilmElements() {
     }
 }
 
+// criar accordion de faq
 fetch('faq.json')
     .then(response => response.json())
     .then(data => {
@@ -318,7 +303,7 @@ fetch('faq.json')
     })
     .catch(error => console.error('Error fetching FAQ JSON:', error));
 
-// update modal
+// atualizar modal conforme o filme selecionado
 const infoModal = document.getElementById('infoModal')
 if (infoModal) {
     infoModal.addEventListener('show.bs.modal', event => {
