@@ -2,26 +2,21 @@ body {
   color: #020024;
   background-color: #020024;
 }
-
 html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
-
 ::-webkit-scrollbar {
-  width: 10px; /* Largura da barra de rolagem */
+  width: 10px;
   height: 10px;
 }
-
 ::-webkit-scrollbar-track {
   background: linear-gradient(0deg, #201257 0%, #1A0E46 100%);
 }
-
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(84, 61, 178, 0.5); /* Cor da barra de rolagem */
-  border-radius: 15px; /* Borda arredondada da barra de rolagem */
+  background-color: rgba(84, 61, 178, 0.5);
+  border-radius: 15px;
 }
-
 h1 {
   color: #F8EBFF;
   font-size: 38px;
@@ -29,7 +24,6 @@ h1 {
   line-height: 103%;
   left: 43px;
 }
-
 h2 {
   color: #F8EBFF;
   font-size: 25px;
@@ -37,7 +31,6 @@ h2 {
   font-weight: 600;
   line-height: normal;
 }
-
 h3 {
   color: #F8EBFF;
   font-size: 24px;
@@ -45,14 +38,12 @@ h3 {
   font-weight: 700;
   line-height: normal;
 }
-
 h4 {
   color: #F8EBFF;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
 }
-
 h5 {
   color: #F8EBFF;
   font-size: 20px;
@@ -60,28 +51,24 @@ h5 {
   font-weight: 600;
   line-height: normal;
 }
-
 p {
   color: #F8EBFF;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
 }
-
 .p18 {
   color: #F8EBFF;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
 }
-
 .small {
   color: #F8EBFF;
   font-size: 10px;
   font-weight: 300;
   text-transform: uppercase;
 }
-
 .numero {
   color: #F8EBFF;
   text-align: center;
@@ -91,11 +78,7 @@ p {
   line-height: 101%;
   text-transform: uppercase;
 }
-
-img {
-  pointer-events: none;
-}
-
+img {pointer-events: none;}
 .gradient-background {
   position: fixed;
   top: 0;
@@ -104,67 +87,53 @@ img {
   height: 100%;
   background: linear-gradient(0deg, #28166D 0%, #020024 100%);
   z-index: -1;
-  pointer-events: none; /* Ensures the background doesn't interfere with other elements */
+  pointer-events: none;
 }
-
 .navbar-toggler {
   border: none;
 }
 .navbar-toggler svg {
   fill: #F8EBFF;
 }
-
 button {
   border: none;
 }
-
 .header-button {
   text-decoration: none;
   color: #F8EBFF;
   text-transform: lowercase;
 }
-
 nav li:hover, nav a:hover {
   color: #BAB0BF;
 }
-
 header {
   position: relative;
   background: #020024;
   box-shadow: 0 4px 3px 0 #020024;
   z-index: 1;
 }
-
 .btn {
   border-radius: 15px;
   padding: 10px 30%;
   max-width: 350px;
   white-space: nowrap;
   background: #F8EBFF;
-
   font-size: 25px;
   font-style: normal;
   font-weight: 600;
   color: #020024;
   text-align: center;
 }
-
 .btn:hover {
   background: #BAB0BF;
   color: rgba(2, 0, 36, 0.80);
 }
-
-/* Estilo para o carrossel e imagens */
-#filmCarousel {
-  overflow: hidden;
-}
-
+#filmCarousel {overflow: hidden;}
 #filmCarousel .carousel-inner .carousel-item img {
   width: 100%;
   height: 685px;
   object-fit: cover;
 }
-
 #filmCarousel .carousel-inner .carousel-item::before {
   content: "";
   position: absolute;
@@ -172,11 +141,9 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to right, #28166D, #28166D00); /* Gradiente sobre a imagem */
-  z-index: 0; /* Posiciona o degradê acima da imagem */
+  background: linear-gradient(to right, #28166D, #28166D00);
+  z-index: 0;
 }
-
-/* Estilo para os parágrafos sobre a imagem */
 .carousel-caption {
   position: absolute;
   max-width: 570px;
@@ -190,15 +157,10 @@ header {
   padding: 45px;
   right: 30%;
 }
-
-/* Estilo para a cor do ícone ao passar o mouse */
-.carousel-control-prev:hover, .carousel-control-next:hover {
-  fill: #ffffff;
-}
-
+.carousel-control-prev:hover, .carousel-control-next:hover {fill: #ffffff;}
 .carousel-btn {
   position: absolute;
-  top: 370px; /* Distância em relação à parte inferior */
+  top: 370px;
   left: 0;
   width: 100%;
   max-width: 400px;
@@ -206,7 +168,6 @@ header {
   justify-content: left;
   padding: 0 45px;
 }
-
 .banner {
   background-image: linear-gradient(0deg, rgba(40, 22, 109, 0.50) 0%, rgba(40, 22, 109, 0.50) 100%);
   background-size: cover;
@@ -221,24 +182,19 @@ header {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-
   transition: opacity 300ms;
 }
-
 .banner:hover {
   opacity: 0.8;
 }
-
 .cartazes {
   margin: 16px auto;
   padding: 16px 0;
   left: 43px;
 }
-
 .cartazes ::-webkit-scrollbar {
-  height: 10px; /* Largura da barra de rolagem */
+  height: 10px;
 }
-
 .cartaz .img-cartaz {
   width: 299px;
   height: 450px;
@@ -246,7 +202,6 @@ header {
   background-position: center center;
   border-radius: 15px;
 }
-
 .cartaz-texto {
   display: -webkit-box;
   width: 299px;
@@ -254,7 +209,6 @@ header {
   -webkit-line-clamp: 1;
   text-align: center;
 }
-
 .cartazes .titulo {
   display: -webkit-box;
   width: 309px;
@@ -265,27 +219,22 @@ header {
   text-align: center;
   text-overflow: ellipsis;
 }
-
 .cartazes a {
   text-decoration: none;
 }
-
 .cartaz {
   position: relative;
   padding: 16px 16px;
 }
-
 .image-container {
   position: relative;
   display: inline-block;
 }
-
 .img-cartaz {
   display: block;
-  width: 100%; /* Ensure the image takes the full width */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  height: auto;
 }
-
 .cartaz-detalhes {
   position: absolute;
   top: 50%;
@@ -294,7 +243,6 @@ header {
   text-align: center;
   padding: 10px;
 }
-
 .sobre {
   position: relative;
   width: 100vw;
@@ -306,11 +254,9 @@ header {
   background-position: center center;
   box-shadow: 0 -4px 20px 0 #2c2767 inset;
 }
-
 @media (max-width: 767px) {
-  /*sobre*/
   .sobre p {
-    font-size: 15px; /* Set the font size to 15px for small screens */
+    font-size: 15px;
   }
   .sobre .carousel-caption {
     top: 15px;
@@ -320,7 +266,6 @@ header {
     align-items: center;
     justify-content: center;
   }
-  /*em breve*/
   .cartaz .img-cartaz {
     width: 150px;
     height: 225px;
@@ -344,7 +289,6 @@ header {
   .pre-estreia p {
     font-size: 12px;
   }
-  /*banner*/
   .carousel-caption {
     text-align: justify;
     justify-content: center;
@@ -356,7 +300,6 @@ header {
     background: linear-gradient(to top, #28166D, #28166D00);
   }
 }
-
 .desktop-hide {
   display: none;
 }
@@ -399,7 +342,6 @@ header {
   display: flex;
   align-items: flex-start;
 }
-
 .filme .sessoes {
   display: flex;
   width: 341px;
@@ -417,7 +359,6 @@ header {
   align-items: flex-start;
   flex-shrink: 0;
 }
-
 #contato .contato {
   display: flex;
   flex-direction: column;
@@ -429,12 +370,10 @@ header {
   align-items: center;
   text-decoration: none;
 }
-
 @media (max-width: 500px) {
   #contato .contato svg {
     width: 15px;
   }
-  /*filme*/
   .desktop-hide {
     display: block;
   }
@@ -486,7 +425,6 @@ header {
   .carousel-caption h1 {
     text-align: center;
     font-size: clamp(20px,8vw,38px);
-
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
@@ -505,13 +443,13 @@ header {
     padding: 60px 0;
     flex-direction: column;
     position: absolute;
-    left: 50%; /* Center the caption horizontally */
+    left: 50%;
     max-width: 570px;
     text-align: center;
     display: block;
-    bottom: 30px; /* Adjust the distance from the bottom */
-    top: auto; /* Remove the top positioning */
-    transform: translateX(-50%); /* Only center horizontally */
+    bottom: 30px;
+    top: auto;
+    transform: translateX(-50%);
   }
   .carousel-btn {
     position: absolute;
@@ -527,12 +465,10 @@ header {
     background-image: linear-gradient(rgba(40, 22, 109, 0.7), rgba(40, 22, 109, 0.7)), url('../images/cinema.jpg');
   }
 }
-
 footer {
   padding: 45px 30px;
   margin: auto auto;
 }
-
 footer .contato {
   display: flex;
   align-items: center;
@@ -540,33 +476,28 @@ footer .contato {
   padding: 5px 0;
   overflow: hidden;
 }
-
 footer .contato h5 {
   display: inline;
   margin-left: 15px;
   font-size: clamp(10px,16px,18px);;
 }
-
 footer a {
   text-decoration: none;
 }
-
 .pd45 {
   padding: 16px 45px;
 }
-
 .date-carousel {
   display: flex;
   justify-content: flex-start !important;
   align-items: center;
-  width: 100%; /* Set a fixed width to accommodate all buttons */
+  width: 100%;
   padding: 16px 45px;
-  margin-right: auto; /* Align to the left */
-  white-space: nowrap; /* Prevent button items from wrapping to the next line */
+  margin-right: auto;
+  white-space: nowrap;
   overflow-x: auto;
   flex-direction: row;
 }
-
 .date-item {
   align-items: center;
   border-radius: 15px 15px 0 0;
@@ -576,64 +507,52 @@ footer a {
   position: relative;
   background-color: #28166D;
 }
-
 @media screen and (max-width: 900px) {
   .date-carousel {
     padding: 16px 0;
   }
 }
-
 .date-item.active {
   background-color: #543DB2;
 }
-
 .date-item.active:hover {
   background-color: #7560C1;
 }
-
 .date-item:hover {
   background-color: #52418A;
 }
-
 .date-button {
   background-color: transparent;
   fill: #f8ebff;
 }
-
 svg:hover {
   fill: rgba(248, 235, 255, 0.5);
 }
-
 .prog-box {
   background-color: #543DB2;
   width: 100vw;
   margin: -16px 0 0;
   padding: 16px 16px 65px;
 }
-
 #prog-box {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-
 @media screen and (max-width: 1100px) {
   #prog-box {
-    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-columns: 1fr;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
 }
-
 .prog-box .dados {
   width: 425px;
 }
-
 .prog-box .cartaz {
   padding: 0;
 }
-
 .prog-box .img-cartaz {
   width: 113px; !important;
   height: 170px; !important;
@@ -641,57 +560,39 @@ svg:hover {
   background-position: center center;
   border-radius: 15px;
 }
-
 .sessao {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   padding: 8px 0;
 }
-
 .sessao .horarios {
   display: flex;
   gap: 10px;
 }
-
 .sessao .numero {
   padding: 0 4px;
   border-radius: 5px;
   border: 2px solid #F8EBFF;
 }
-
-.sessao .sala {
-  padding-right: 16px;
-}
-
-.sessao .esp {
-  margin-left: auto;
-}
-
-.capt {
-  text-transform: capitalize;
-}
-
-.uppr {
-  text-transform: uppercase;
-}
-
+.sessao .sala {padding-right: 16px;}
+.sessao .esp {margin-left: auto;}
+.capt {text-transform: capitalize;}
+.uppr {text-transform: uppercase;}
 .pre-estreia {
   width: 249px;
   height: 31px;
   position: absolute;
-  bottom: 110px; /* Adjust this value to control the distance from the bottom */
+  bottom: 110px;
   left: 50%;
   transform: translateX(-50%);
 
   border-radius: 15px;
   background: #543DB2;
 }
-
 .pre-estreia p {
   text-align: center;
 }
-
 .popup-overlay {
   display: none;
   position: fixed;
@@ -702,8 +603,6 @@ svg:hover {
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 9999;
 }
-
-/* Styling for the popup content */
 .popup-content {
   position: absolute;
   top: 50%;
@@ -713,29 +612,23 @@ svg:hover {
   padding: 20px;
   border-radius: 5px;
 }
-
-/* Styling for the close button */
 .close-popup {
   margin-top: 10px;
   cursor: pointer;
 }
-
 .accordion {
   padding-bottom: 45px;
   --bs-accordion-bg: #28166d;
 }
-
 .accordion-header, .accordion-button {
   font-weight: 500;
   font-size: 20px;
   color: #F8EBFF;
 }
-
 .accordion-button:not(.collapsed) {
   background-color: #543DB2;
   color: #F8EBFF;
 }
-
 .accordion-item {
   border-color: #020024;
   color: #F8EBFF;
@@ -743,21 +636,17 @@ svg:hover {
   font-weight: 400;
   font-size: 16px;
 }
-
 .accordion-button::after,
 .accordion-button:not(.collapsed)::after {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23F8EBFF'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
-
 .modal {
   --bs-modal-bg: #28166D;
   --bs-modal-header-border-color: #28166D;
 }
-
 .modal-body {
   padding: 32px;
 }
-
 @media (max-width: 767px) {
   .info-desktop {
     visibility: hidden;
@@ -766,7 +655,6 @@ svg:hover {
     visibility: visible;
   }
 }
-
 @media (min-width: 768px) {
   .info-desktop {
     visibility: visible;
@@ -775,37 +663,28 @@ svg:hover {
     visibility: hidden;
   }
 }
-
 .openModal:hover img {
   opacity: 60%;
   transition: 200ms;
 }
-
 a.openModal:hover {
   opacity: 60%;
   transition: 200ms;
 }
-
 .cartaz-detalhes {
   visibility: hidden;
 }
-
 .openModal:hover .cartaz-detalhes {
   visibility: visible;
   transition: 200ms;
 }
-
 .modal.fade .modal-dialog {
   -webkit-transition: -webkit-transform 0.3s ease-out;
   -moz-transition: -moz-transform 0.3s ease-out;
   -o-transition: -o-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
 }
-
-.modal.in .modal-dialog {
-
-}
-
+.modal.in .modal-dialog {}
 .block-text,
 .cartaz-detalhes {
   -webkit-user-select: none;
