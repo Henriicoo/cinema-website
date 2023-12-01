@@ -238,7 +238,7 @@ function createFutureFilmElements() {
                     <p class="cartaz-detalhes">ver detalhes</p>
                 </div>
                 ${filme["pre-estreia"] ? '<div class="pre-estreia block-text"><p><bold>PR&Eacute;-ESTREIA DISPON&Iacute;VEL</bold></p></div>' : ''}
-                <h2 class="cartaz-texto titulo">${filme.titulo}</h2>
+                <h2 class="cartaz-texto titulo"><strong>${filme.titulo}</strong></h2>
                 <h2 class="cartaz-texto">${filme.estreia}</h2>
             </div>
         `;
