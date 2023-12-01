@@ -37,6 +37,7 @@ section {
 label {
     font-weight: 500;
     color: #020024;
+    background-color: transparent;
 }
 label:focus {
     border: none;
@@ -99,4 +100,12 @@ label:focus {
     border-radius: 0 15px 15px 15px;
     width: 90vw;
     height: 500px;
+}
+
+.form-floating>label {
+    background-color: transparent;
+}
+
+label {
+    background-color: transparent;
 }
