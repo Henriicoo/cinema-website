@@ -586,12 +586,12 @@ svg:hover {
   bottom: 110px;
   left: 50%;
   transform: translateX(-50%);
-
-  border-radius: 15px;
-  background: #543DB2;
 }
 .pre-estreia p {
   text-align: center;
+  background-color: #543DB2;
+  border-radius: 15px;
+  padding: 4px;
 }
 .popup-overlay {
   display: none;
