@@ -131,7 +131,7 @@ header {
 #filmCarousel {overflow: hidden;}
 #filmCarousel .carousel-inner .carousel-item img {
   width: 100%;
-  height: 685px;
+  height: 785px;
   object-fit: cover;
 }
 #filmCarousel .carousel-inner .carousel-item::before {
@@ -690,4 +690,8 @@ a.openModal:hover {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+.navbar-nav > li{
+  padding-left:15px;
+  padding-right:15px;
 }
