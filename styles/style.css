@@ -308,7 +308,7 @@ header {
 }
 .filme {
   display: flex;
-  width: 520px;
+  width: 490px;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -678,4 +678,7 @@ a.openModal:hover {
 .navbar-nav > li{
   padding-left:15px;
   padding-right:15px;
+}
+.small strong {
+  font-weight: 600;
 }

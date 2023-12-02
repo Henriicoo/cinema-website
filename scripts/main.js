@@ -223,7 +223,7 @@ function createFutureFilmElements() {
                     <img src="images/${filme.uuid}_poster.jpg" alt="Poster de ${filme.titulo}" class="img-cartaz">
                     <p class="cartaz-detalhes">ver detalhes</p>
                 </div>
-                ${filme["pre-estreia"] ? '<div class="pre-estreia block-text"><p><bold>PR&Eacute;-ESTREIA DISPON&Iacute;VEL</bold></p></div>' : ''}
+                ${filme["pre-estreia"] ? '<div class="pre-estreia block-text"><p><strong>PR&Eacute;-ESTREIA DISPON&Iacute;VEL</strong></p></div>' : ''}
                 <h2 class="cartaz-texto titulo"><strong>${filme.titulo}</strong></h2>
                 <h2 class="cartaz-texto">${filme.estreia}</h2>
             </div>
@@ -304,10 +304,10 @@ if (infoModal) {
                 <h1>${filme.titulo}</h1>
                 <p class="small">${filme.tempo} &bull; CLASS. ${filme.class} &bull; EM CARTAZ AT&Eacute; ${filme.fim}</p>
                 <p>${filme.sinopse}</p>
-                <span class="small">MAIS INFORMA&Ccedil;&Otilde;ES:</span><br>
-                    <span class="small"><bold>DIRE&Ccedil;&Atilde;O:</bold> ${filme.direcao} | <bold>ROTEIRO:</bold> ${filme.roteiro} | <bold>ATORES:</bold> ${filme.atores} | <bold>G&Ecirc;NERO:</bold> ${filme.genero} | <bold>IMDB:</bold> ${filme.imdb}</span>
+                <span class="small" style="font-size=15px"><strong>MAIS INFORMA&Ccedil;&Otilde;ES:</strong></span><br>
+                    <span class="small"><strong>DIRE&Ccedil;&Atilde;O:</strong> ${filme.direcao} | <strong>ROTEIRO:</strong> ${filme.roteiro} | <strong>ATORES:</strong> ${filme.atores} | <strong>G&Ecirc;NERO:</strong> ${filme.genero} | <strong>IMDB:</strong> ${filme.imdb}</span>
             </div>
-            <div class="col-lg-6 ms-md-3 mx-auto" style="padding-top: 64px">
+            <div class="col-lg-6 ms-md-3 mx-auto"  style="padding-top: 64px">
                 <iframe style="display: block; margin-left: auto; margin-right: 0;" width=100% height=100% src="https://www.youtube-nocookie.com/embed/${filme.trailer}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         `;
