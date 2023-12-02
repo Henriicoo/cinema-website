@@ -647,22 +647,6 @@ svg:hover {
 .modal-body {
   padding: 32px;
 }
-/*@media (max-width: 767px) {
-  .info-desktop {
-    visibility: hidden;
-  }
-  .info-mobile {
-    visibility: visible;
-  }
-}
-@media (min-width: 768px) {
-  .info-desktop {
-    visibility: visible;
-  }
-  .info-mobile {
-    visibility: hidden;
-  }
-}*/
 .openModal:hover img {
   opacity: 60%;
   transition: 200ms;
