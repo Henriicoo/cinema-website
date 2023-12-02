@@ -463,6 +463,9 @@ header {
   .sobre {
     background-image: linear-gradient(rgba(40, 22, 109, 0.7), rgba(40, 22, 109, 0.7)), url('../images/cinema.jpg');
   }
+  .carousel-indicators {
+    visibility: hidden;
+  }
 }
 footer {
   padding: 45px 30px;
