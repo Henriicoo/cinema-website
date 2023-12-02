@@ -681,3 +681,9 @@ a.openModal:hover {
 .small strong {
   font-weight: 600;
 }
+.carousel-indicators [data-bs-target] {
+  background-color: #F8EBFF;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}

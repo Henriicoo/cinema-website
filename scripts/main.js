@@ -12,6 +12,7 @@ async function fetchJsonData() {
 function createCarouselItems(data) {
     const carouselInner = document.getElementById('carouselInner');
     const today = new Date();
+    let slideId = 0;
 
     for (const uuid in data) {
         const filme = data[uuid];
@@ -19,7 +20,7 @@ function createCarouselItems(data) {
         const estreiaDate = new Date(estreiaDateParts[2], estreiaDateParts[1] - 1, estreiaDateParts[0]);
         const fimDateParts = filme.fim.split('/');
         const fimDate = new Date(fimDateParts[2], fimDateParts[1] - 1, fimDateParts[0]);
-
+        
         if (estreiaDate <= today && fimDate >= today) {
             const carouselItem = document.createElement('div');
             carouselItem.classList.add('carousel-item');
@@ -50,6 +51,22 @@ function createCarouselItems(data) {
             link.href = '#prog';
             link.classList.add('btn');
             link.textContent = 'Ver Sessões';
+
+            const novoBotao = document.createElement("button");
+
+            novoBotao.setAttribute("type", "button");
+            novoBotao.setAttribute("data-bs-target", "#filmCarousel");
+            
+            if(slideId === 0) {
+                novoBotao.setAttribute("class", "active");
+                novoBotao.setAttribute("aria-current", "true");
+            }
+            
+            novoBotao.setAttribute("data-bs-slide-to", slideId);
+            slideId = slideId+1;
+            
+            novoBotao.setAttribute("aria-label", `Slide ${slideId}`);
+            document.getElementById("carousel-indicators").appendChild(novoBotao);
 
             carouselBtn.appendChild(link);
             carouselCaption.appendChild(carouselBtn);
