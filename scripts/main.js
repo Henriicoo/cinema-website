@@ -307,8 +307,8 @@ if (infoModal) {
                 <span class="small">MAIS INFORMA&Ccedil;&Otilde;ES:</span><br>
                     <span class="small"><bold>DIRE&Ccedil;&Atilde;O:</bold> ${filme.direcao} | <bold>ROTEIRO:</bold> ${filme.roteiro} | <bold>ATORES:</bold> ${filme.atores} | <bold>G&Ecirc;NERO:</bold> ${filme.genero} | <bold>IMDB:</bold> ${filme.imdb}</span>
             </div>
-            <div class="col">
-                <iframe style="display: block; margin-left: auto; margin-right: 0; min-width: 300px; min-height:168px" width=100% height=56% src="https://www.youtube-nocookie.com/embed/${filme.trailer}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="col-lg-6 ms-md-3 mx-auto" style="padding-top: 64px">
+                <iframe style="display: block; margin-left: auto; margin-right: 0;" width=100% height=100% src="https://www.youtube-nocookie.com/embed/${filme.trailer}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         `;
     })
