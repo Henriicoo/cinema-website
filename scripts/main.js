@@ -146,7 +146,7 @@ function generateFilmeElement(filme, dia) {
             <div class="row">
                 <div class="col-sm-3">
                     <div class="dropshadow openModal col-md-6 d-none d-sm-block" role="button" data-bs-toggle="modal" data-bs-target="#infoModal" data-bs-uuid="${filme.uuid}">
-                        <img src="images/${filme.uuid}_poster.jpg" alt="Poster de $titulo" style="max-width: 146px; height: auto;">
+                        <img src="images/${filme.uuid}_poster.jpg" alt="Poster de ${filme.titulo}" style="max-width: 146px; height: auto;">
                     </div>
                 </div>
                 <div class="col-sm-6 align-middle">
@@ -188,15 +188,15 @@ function generateSessionHTML(sessoes) {
     let sessionHTML = "";
     for (const sala in sessoes) {
         const horarios = sessoes[sala].horarios
-            .map((horario) => `<span class="numero tag-border">${horario}</span>`)
+            .map((horario) => `<span class="numero tag-border block-text">${horario}</span>`)
             .join("");
-        const tipoAudio = `<p class="tag capt d-inline">${sessoes[sala].audio}</p><p class="tag uppr d-inline">${sessoes[sala].tipo}</p>`;
+        const tipoAudio = `<p class="tag capt d-inline block-text">${sessoes[sala].audio}</p> <p class="tag uppr d-inline block-text">${sessoes[sala].tipo}</p>`;
         sessionHTML += `
       <div class="d-block" style="padding-top: 64px;">
                     <h2 style="padding-right: 16px" class="capt d-inline">${sala}</h2>
                     ${tipoAudio}
                 </div>
-                <div class="d-block" style="padding-top: 12px">
+                <div class="d-block block-text" style="padding-top: 12px">
                     ${horarios}
                 </div>
     `;
