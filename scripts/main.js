@@ -136,8 +136,8 @@ let filmesData;
 // cria o elemento filme em cartaz
 function generateFilmeElement(filme, dia) {
     const filmeElement = document.createElement("div");
-    filmeElement.className = "container-fluid mt-4";
-    filmeElement.setAttribute("style","background-color: rgba(84, 61, 178, 0.50);")
+    filmeElement.className = "container-fluid mt-4 filme-bg";
+    filmeElement.setAttribute("style","background: linear-gradient(0deg, rgba(2, 0, 36, 0.50) 0%, rgba(2, 0, 36, 0.50) 100%), url(images/"+filme.uuid+"_banner.jpg); background-size: cover; background-position: center;")
 
     filmeElement.innerHTML = `
     <div class="row mb-3 text-start">

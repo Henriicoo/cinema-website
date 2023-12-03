@@ -708,3 +708,8 @@ iframe {
 .dropshadow img {
   padding: 15px;
 }
+@media (min-width: 992px) {
+  .filme-bg {
+    background: rgba(84, 61, 178, 0.50) !important
+  }
+}
