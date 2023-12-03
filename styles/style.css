@@ -672,6 +672,12 @@ a.openModal:hover {
 }
 .modal.in .modal-dialog {}
 .block-text,
+.class-l,
+.class-10,
+.class-12,
+.class-14,
+.class-16,
+.class-18,
 .cartaz-detalhes {
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -707,4 +713,35 @@ iframe {
 }
 .dropshadow img {
   padding: 15px;
+}
+.class-l {
+  background-color: rgb(0, 166, 81);
+}
+.class-10 {
+  background-color: rgb(0, 149, 218);
+}
+.class-12 {
+  background-color: rgb(251, 193, 21);
+}
+.class-14 {
+  background-color: rgb(245, 130, 32);
+}
+.class-16 {
+  background-color: rgb(236, 29, 37);
+}
+.class-18 {
+  background-color: rgb(0, 0, 0);
+}
+.class-l,
+.class-10,
+.class-12,
+.class-14,
+.class-16,
+.class-18 {
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 5px;
+  padding: 3px;
+  text-align: center;
+  font-weight: 600;
 }

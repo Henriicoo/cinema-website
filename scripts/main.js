@@ -38,7 +38,8 @@ function createCarouselItems(data) {
 
             const p1 = document.createElement('p');
             p1.classList.add('small');
-            p1.textContent = `${filme.tempo} • CLASS. ${filme.class} • EM CARTAZ ATÉ ${filme.fim}`;
+            p1.style.paddingTop = '5px';
+            p1.innerHTML = `${filme.tempo} • <span class="class-${filme.class}">${filme.class}</span> • EM CARTAZ ATÉ ${filme.fim}`;
 
             const p2 = document.createElement('p');
             p2.className = "sinopse";
@@ -152,8 +153,9 @@ function generateFilmeElement(filme, dia) {
                     </div>
                     <div class="col-sm-8">
                         <h1>${filme.titulo}</h1>
+                        <span class="class-${filme.class} d-none d-lg-inline" style="padding-top: 5px;">${filme.class}</span>
                         <div class="d-flex justify-content-between align-items-center d-lg-none mb-3">
-                            <p class="small d-inline">${filme.tempo} &bull; CLASS. ${filme.class} &bull; EM CARTAZ AT&Eacute; ${filme.fim}</p>
+                            <p style="padding-top: 5px" class="small d-inline">${filme.tempo} &bull; <span class="class-${filme.class}">${filme.class}</span> &bull; EM CARTAZ AT&Eacute; ${filme.fim}</p>
                             <a class="info-desktop openModal col-2 d-inline" aria-label="Ver informações sobre o filme" data-bs-toggle="modal" data-bs-target="#infoModal" data-bs-uuid="${filme.uuid}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 25" fill="none">
                                     <path d="M11.25 6.27621H13.75V8.77621H11.25V6.27621ZM11.25 11.2762H13.75V18.7762H11.25V11.2762ZM12.5 0.0262146C5.6 0.0262146 0 5.62621 0 12.5262C0 19.4262 5.6 25.0262 12.5 25.0262C19.4 25.0262 25 19.4262 25 12.5262C25 5.62621 19.4 0.0262146 12.5 0.0262146ZM12.5 22.5262C6.9875 22.5262 2.5 18.0387 2.5 12.5262C2.5 7.01371 6.9875 2.52621 12.5 2.52621C18.0125 2.52621 22.5 7.01371 22.5 12.5262C22.5 18.0387 18.0125 22.5262 12.5 22.5262Z" fill="#F8EBFF"/>
@@ -172,7 +174,7 @@ function generateFilmeElement(filme, dia) {
                 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
                     <iframe src="https://www.youtube-nocookie.com/embed/${filme.trailer}" allowfullscreen style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></iframe>
                 </div>
-                <p class="text-center" style="padding-bottom: 32px; padding-top: 16px">${filme.tempo} &bull; CLASS. ${filme.class} &bull; EM CARTAZ AT&Eacute; ${filme.fim}</p>
+                <p class="text-center" style="padding-bottom: 32px; padding-top: 16px">${filme.tempo} &bull; EM CARTAZ AT&Eacute; ${filme.fim}</p>
                 <p>${filme.sinopse}</p>
                 <span class="small" style="font-size:15px;"><strong>MAIS INFORMA&Ccedil;&Otilde;ES:</strong></span><br>
                 <span class="small"><strong>DIRE&Ccedil;&Atilde;O:</strong> ${filme.direcao} | <strong>ROTEIRO:</strong> ${filme.roteiro} | <strong>ATORES:</strong> ${filme.atores} | <strong>G&Ecirc;NERO:</strong> ${filme.genero} | <strong>IMDB:</strong> ${filme.imdb}</span>
@@ -342,7 +344,7 @@ if (infoModal) {
         info.innerHTML = `
             <div class="col" style="max-width: 570px;">
                 <h1>${filme.titulo}</h1>
-                <p class="small">${filme.tempo} &bull; CLASS. ${filme.class} &bull; EM CARTAZ AT&Eacute; ${filme.fim}</p>
+                <p class="small">${filme.tempo} &bull; <span class="class-${filme.class}">${filme.class}</span> &bull; EM CARTAZ AT&Eacute; ${filme.fim}</p>
                 <p>${filme.sinopse}</p>
                 <span class="small" style="font-size=15px"><strong>MAIS INFORMA&Ccedil;&Otilde;ES:</strong></span><br>
                     <span class="small"><strong>DIRE&Ccedil;&Atilde;O:</strong> ${filme.direcao} | <strong>ROTEIRO:</strong> ${filme.roteiro} | <strong>ATORES:</strong> ${filme.atores} | <strong>G&Ecirc;NERO:</strong> ${filme.genero} | <strong>IMDB:</strong> ${filme.imdb}</span>
