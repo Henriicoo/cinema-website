@@ -321,13 +321,13 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-.filme h3 {
+/*.filme h3 {
   width: 435px;
   flex-shrink: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
+}*/
 .filme .cartaz {
   display: flex;
   width: 111px;

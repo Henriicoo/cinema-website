@@ -64,7 +64,7 @@ function createCarouselItems(data) {
             
             novoBotao.setAttribute("data-bs-slide-to", slideId);
             slideId = slideId+1;
-            
+
             novoBotao.setAttribute("aria-label", `Slide ${slideId}`);
             document.getElementById("carousel-indicators").appendChild(novoBotao);
 
@@ -137,16 +137,17 @@ let filmesData;
 function generateFilmeElement(filme, dia) {
     const filmeElement = document.createElement("div");
     filmeElement.className = "filme container mt-4";
+    filmeElement.setAttribute("syle","padding: 0px;")
 
     filmeElement.innerHTML = `
-            <div class="filme-header" data-bs-toggle="modal" data-bs-target="#infoModal" data-bs-uuid="${filme.uuid}">
-                <h3>${filme.titulo}</h3>
-                <a class="info-desktop openModal" aria-label="Ver informações sobre ${filme.titulo}">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 25" fill="none">
-                        <path d="M11.25 6.27621H13.75V8.77621H11.25V6.27621ZM11.25 11.2762H13.75V18.7762H11.25V11.2762ZM12.5 0.0262146C5.6 0.0262146 0 5.62621 0 12.5262C0 19.4262 5.6 25.0262 12.5 25.0262C19.4 25.0262 25 19.4262 25 12.5262C25 5.62621 19.4 0.0262146 12.5 0.0262146ZM12.5 22.5262C6.9875 22.5262 2.5 18.0387 2.5 12.5262C2.5 7.01371 6.9875 2.52621 12.5 2.52621C18.0125 2.52621 22.5 7.01371 22.5 12.5262C22.5 18.0387 18.0125 22.5262 12.5 22.5262Z" fill="#F8EBFF"/>
-                    </svg>
-                </a>
-            </div>
+            <div class="row justify-content-evenly" style="width: 500px">
+        <h3 class="col-10">${filme.titulo}</h3>
+        <a class="info-desktop openModal col-2 me-auto" aria-label="Ver informações sobre o filme">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 25" fill="none">
+                <path d="M11.25 6.27621H13.75V8.77621H11.25V6.27621ZM11.25 11.2762H13.75V18.7762H11.25V11.2762ZM12.5 0.0262146C5.6 0.0262146 0 5.62621 0 12.5262C0 19.4262 5.6 25.0262 12.5 25.0262C19.4 25.0262 25 19.4262 25 12.5262C25 5.62621 19.4 0.0262146 12.5 0.0262146ZM12.5 22.5262C6.9875 22.5262 2.5 18.0387 2.5 12.5262C2.5 7.01371 6.9875 2.52621 12.5 2.52621C18.0125 2.52621 22.5 7.01371 22.5 12.5262C22.5 18.0387 18.0125 22.5262 12.5 22.5262Z" fill="#F8EBFF"/>
+            </svg>
+        </a>
+    </div>
             <div class="filme-body">
                 <div id="cartaz-${filme.uuid}" class="cartaz openModal" role="button" data-bs-toggle="modal" data-bs-target="#infoModal" data-bs-uuid="${filme.uuid}">
                     <img src="images/${filme.uuid}_poster.jpg" alt="Poster de $titulo" class="img-cartaz">
