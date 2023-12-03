@@ -169,7 +169,7 @@ function generateFilmeElement(filme, dia) {
         <div class="col-lg-5 d-none d-lg-block">
         <div class="container" style="padding-bottom: 32px; padding-top: 32px;">
             <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
-                <iframe src="https://www.youtube-nocookie.com/embed/${filme.trailer}" frameborder="0" allowfullscreen style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></iframe>
+                <iframe src="https://www.youtube-nocookie.com/embed/${filme.trailer}" allowfullscreen style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></iframe>
             </div>
             <p class="text-center" style="padding-bottom: 32px; padding-top: 16px">${filme.tempo} &bull; CLASS. ${filme.class} &bull; EM CARTAZ AT&Eacute; ${filme.fim}</p>
             <p>${filme.sinopse}</p>
@@ -345,8 +345,8 @@ if (infoModal) {
                 <span class="small" style="font-size=15px"><strong>MAIS INFORMA&Ccedil;&Otilde;ES:</strong></span><br>
                     <span class="small"><strong>DIRE&Ccedil;&Atilde;O:</strong> ${filme.direcao} | <strong>ROTEIRO:</strong> ${filme.roteiro} | <strong>ATORES:</strong> ${filme.atores} | <strong>G&Ecirc;NERO:</strong> ${filme.genero} | <strong>IMDB:</strong> ${filme.imdb}</span>
             </div>
-            <div class="col-lg-6 ms-md-3 mx-auto"  style="padding-top: 64px">
-                <iframe style="display: block; margin-left: auto; margin-right: 0;" width=100% height=100% src="https://www.youtube-nocookie.com/embed/${filme.trailer}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="col-lg-6 ms-md-3 mx-auto" style="padding-top: 56.25%; position: relative;">
+                <iframe src="https://www.youtube-nocookie.com/embed/${filme.trailer}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         `;
     })
