@@ -568,7 +568,7 @@ svg:hover {
   gap: 10px;
   padding: 8px 0;
 }
-.sessao .horarios {
+.horarios {
   display: flex;
   gap: 10px;
 }
@@ -689,4 +689,22 @@ a.openModal:hover {
   width: 10px;
   height: 10px;
   border-radius: 100%;
+}
+.tag {
+  padding: 0 10px;
+  border-radius: 5px;
+  background: rgba(186, 176, 191, 0.20);
+}
+.tag-border {
+  padding: 0 4px;
+  border-radius: 5px;
+  border: 2px solid #F8EBFF;
+}
+.dropshadow,
+.cartaz,
+iframe {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.dropshadow img {
+  padding: 15px;
 }

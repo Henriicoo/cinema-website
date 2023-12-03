@@ -136,28 +136,48 @@ let filmesData;
 // cria o elemento filme em cartaz
 function generateFilmeElement(filme, dia) {
     const filmeElement = document.createElement("div");
-    filmeElement.className = "filme container mt-4";
-    filmeElement.setAttribute("syle","padding: 0px;")
+    filmeElement.className = "container-fluid mt-4";
+    filmeElement.setAttribute("style","background-color: rgba(84, 61, 178, 0.50);")
 
     filmeElement.innerHTML = `
-            <div class="row justify-content-evenly" style="width: 500px">
-        <h3 class="col-10">${filme.titulo}</h3>
-        <a class="info-desktop openModal col-2 me-auto" aria-label="Ver informações sobre o filme" data-bs-toggle="modal" data-bs-target="#infoModal" data-bs-uuid="${filme.uuid}">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 25" fill="none">
-                <path d="M11.25 6.27621H13.75V8.77621H11.25V6.27621ZM11.25 11.2762H13.75V18.7762H11.25V11.2762ZM12.5 0.0262146C5.6 0.0262146 0 5.62621 0 12.5262C0 19.4262 5.6 25.0262 12.5 25.0262C19.4 25.0262 25 19.4262 25 12.5262C25 5.62621 19.4 0.0262146 12.5 0.0262146ZM12.5 22.5262C6.9875 22.5262 2.5 18.0387 2.5 12.5262C2.5 7.01371 6.9875 2.52621 12.5 2.52621C18.0125 2.52621 22.5 7.01371 22.5 12.5262C22.5 18.0387 18.0125 22.5262 12.5 22.5262Z" fill="#F8EBFF"/>
-            </svg>
-        </a>
-    </div>
-            <div class="filme-body">
-                <div id="cartaz-${filme.uuid}" class="cartaz openModal" role="button" data-bs-toggle="modal" data-bs-target="#infoModal" data-bs-uuid="${filme.uuid}">
-                    <img src="images/${filme.uuid}_poster.jpg" alt="Poster de $titulo" class="img-cartaz">
+    <div class="row mb-3 text-start">
+        <div class="col-lg-7" style="background-color: rgba(84, 61, 178, 0.50);">
+            <div class="container" style="padding-top: 32px; padding-bottom: 32px">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="dropshadow openModal col-md-6 d-none d-sm-block" role="button" data-bs-toggle="modal" data-bs-target="#infoModal" data-bs-uuid="${filme.uuid}">
+                        <img src="images/${filme.uuid}_poster.jpg" alt="Poster de $titulo" style="max-width: 146px; height: auto;">
+                    </div>
                 </div>
-                <div class="dados">
-                    <div class="sessoes">
-                        ${generateSessionHTML(filme.sessoes[dia])}
+                <div class="col-sm-6 align-middle">
+                    <h1>${filme.titulo}</h1>
+                    <div class="d-flex justify-content-between align-items-center d-lg-none mb-3">
+                        <p class="small d-inline">${filme.tempo} &bull; CLASS. ${filme.class} &bull; EM CARTAZ AT&Eacute; ${filme.fim}</p>
+                        <a class="info-desktop openModal col-2 d-inline" aria-label="Ver informações sobre o filme" data-bs-toggle="modal" data-bs-target="#infoModal" data-bs-uuid="${filme.uuid}">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 25" fill="none">
+                                <path d="M11.25 6.27621H13.75V8.77621H11.25V6.27621ZM11.25 11.2762H13.75V18.7762H11.25V11.2762ZM12.5 0.0262146C5.6 0.0262146 0 5.62621 0 12.5262C0 19.4262 5.6 25.0262 12.5 25.0262C19.4 25.0262 25 19.4262 25 12.5262C25 5.62621 19.4 0.0262146 12.5 0.0262146ZM12.5 22.5262C6.9875 22.5262 2.5 18.0387 2.5 12.5262C2.5 7.01371 6.9875 2.52621 12.5 2.52621C18.0125 2.52621 22.5 7.01371 22.5 12.5262C22.5 18.0387 18.0125 22.5262 12.5 22.5262Z" fill="#F8EBFF"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
+            <div class="mb-3">
+                ${generateSessionHTML(filme.sessoes[dia])}
+            </div>
+        </div>
+        </div>
+        <div class="col-lg-5 d-none d-lg-block">
+        <div class="container" style="padding-bottom: 32px; padding-top: 32px;">
+            <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+                <iframe src="https://www.youtube-nocookie.com/embed/${filme.trailer}" frameborder="0" allowfullscreen style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></iframe>
+            </div>
+            <p class="text-center" style="padding-bottom: 32px; padding-top: 16px">${filme.tempo} &bull; CLASS. ${filme.class} &bull; EM CARTAZ AT&Eacute; ${filme.fim}</p>
+            <p>${filme.sinopse}</p>
+            <span class="small" style="font-size:15px;"><strong>MAIS INFORMA&Ccedil;&Otilde;ES:</strong></span><br>
+            <span class="small"><strong>DIRE&Ccedil;&Atilde;O:</strong> ${filme.direcao} | <strong>ROTEIRO:</strong> ${filme.roteiro} | <strong>ATORES:</strong> ${filme.atores} | <strong>G&Ecirc;NERO:</strong> ${filme.genero} | <strong>IMDB:</strong> ${filme.imdb}</span>
+            </div>
+        </div>
+    </div>
   `;
 
     return filmeElement;
@@ -168,17 +188,17 @@ function generateSessionHTML(sessoes) {
     let sessionHTML = "";
     for (const sala in sessoes) {
         const horarios = sessoes[sala].horarios
-            .map((horario) => `<span class="numero">${horario}</span>`)
+            .map((horario) => `<span class="numero tag-border">${horario}</span>`)
             .join("");
-        const tipoAudio = `<span class="p18 esp uppr block-text">${sessoes[sala].tipo} ${sessoes[sala].audio}</span>`;
+        const tipoAudio = `<p class="tag capt d-inline">${sessoes[sala].audio}</p><p class="tag uppr d-inline">${sessoes[sala].tipo}</p>`;
         sessionHTML += `
-      <div class="sessao">
-        <div class="sessao-head">
-            <span class="p18 sala capt block-text">${sala}</span>
-            ${tipoAudio}
-        </div>
-        <div class="horarios block-text">${horarios}</div>
-      </div>
+      <div class="d-block" style="padding-top: 64px;">
+                    <h2 style="padding-right: 16px" class="capt d-inline">${sala}</h2>
+                    ${tipoAudio}
+                </div>
+                <div class="d-block" style="padding-top: 12px">
+                    ${horarios}
+                </div>
     `;
     }
     return sessionHTML;
@@ -190,7 +210,7 @@ async function createFilmesElements() {
     
     const diaAtual = dateItems.item(currentDateIndex).id;
     
-    const progBox = document.getElementById("prog-box");
+    const progBox = document.getElementById("programacao");
     progBox.innerHTML = "";
 
     const today = new Date();
