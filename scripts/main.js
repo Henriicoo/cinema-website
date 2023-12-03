@@ -189,7 +189,7 @@ function generateSessionHTML(sessoes) {
     for (const sala in sessoes) {
         const horarios = sessoes[sala].horarios
             .map((horario) => `<span class="numero tag-border block-text">${horario}</span>`)
-            .join("");
+            .join(" ");
         const tipoAudio = `<p class="tag capt d-inline block-text">${sessoes[sala].audio}</p> <p class="tag uppr d-inline block-text">${sessoes[sala].tipo}</p>`;
         sessionHTML += `
       <div class="d-block" style="padding-top: 64px;">
