@@ -346,7 +346,7 @@ if (infoModal) {
                     <span class="small"><strong>DIRE&Ccedil;&Atilde;O:</strong> ${filme.direcao} | <strong>ROTEIRO:</strong> ${filme.roteiro} | <strong>ATORES:</strong> ${filme.atores} | <strong>G&Ecirc;NERO:</strong> ${filme.genero} | <strong>IMDB:</strong> ${filme.imdb}</span>
             </div>
             <div class="col-lg-6 ms-md-3 mx-auto" style="padding-top: 56.25%; position: relative;">
-                <iframe src="https://www.youtube-nocookie.com/embed/${filme.trailer}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe src="https://www.youtube-nocookie.com/embed/${filme.trailer}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; max-height: 440px;" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         `;
     })
