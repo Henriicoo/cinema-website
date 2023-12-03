@@ -210,8 +210,8 @@ async function createFilmesElements() {
     
     const diaAtual = dateItems.item(currentDateIndex).id;
     
-    const progBox = document.getElementById("programacao");
-    progBox.innerHTML = "";
+    const programacao = document.getElementById("programacao");
+    programacao.innerHTML = "";
 
     const today = new Date();
     for (const filmeId in filmesData) {
@@ -223,7 +223,7 @@ async function createFilmesElements() {
 
         if (estreiaDate <= today && fimDate >= today && filme.sessoes[diaAtual]) {
             const filmeElement = generateFilmeElement(filme, diaAtual);
-            progBox.appendChild(filmeElement);
+            programacao.appendChild(filmeElement);
         }
     }
 }
