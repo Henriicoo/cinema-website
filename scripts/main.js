@@ -8,6 +8,16 @@ async function fetchJsonData() {
     }
 }
 
+async function getDiasFechados() {
+    try {
+        const response = await fetch('config.json');
+        const data = await response.json();
+        return data['diasfechados'];
+    }catch (error) {
+        console.error("Impossível ler o arquivo:",error)
+    }
+}
+
 // criar os itens do carrossel
 function createCarouselItems(data) {
     const carouselInner = document.getElementById('carouselInner');
@@ -99,10 +109,13 @@ function generateDates() {
     for (let i = 0; i <= 6; i++) {
         const date = new Date(today);
         date.setDate(today.getDate() + i);
-        const dateString = `${date.getDate()}/${date.getMonth() + 1}`;
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const dateString = `${day}/${month}`;
         const dayOfWeek = getDayOfWeek(date.getDay());
         dateItems[i].innerHTML = `${dateString}<br><span>${dayOfWeek}</span>`;
         dateItems[i].setAttribute('id',dayOfWeek)
+        dateItems[i].setAttribute('date-string',dateString+`/${date.getFullYear()}`)
     }
 }
 function getDayOfWeek(dayNumber) {
@@ -213,8 +226,21 @@ async function createFilmesElements() {
     if (!filmesData) return;
     
     const diaAtual = dateItems.item(currentDateIndex).id;
-    
+    const diaCal = dateItems.item(currentDateIndex).getAttribute('date-string');
     const programacao = document.getElementById("programacao");
+
+    const diasFechados = await getDiasFechados();
+    
+    if (diasFechados && Array.isArray(diasFechados) && diasFechados.includes(diaCal)) {
+        programacao.innerHTML = '<div class="container-fluid" style="background-color: #543DB2; margin-top: 24px">' +
+            '    <div class="container text-center" style="padding-top: 64px; padding-bottom: 128px">' +
+            '        <h1>Infelizmente n&atilde;o h&aacute; nenhuma sess&atilde;o programada para hoje</h1>' +
+            '        <h2>Procure por outro dia</h2>' +
+            '    </div>' +
+            '    </div>';
+        return;
+    }
+    
     programacao.innerHTML = "";
 
     const today = new Date();
@@ -284,14 +310,14 @@ function createFutureFilmElements() {
 }
 
 // criar accordion de faq
-fetch('faq.json')
+fetch('config.json')
     .then(response => response.json())
     .then(data => {
         const accordionContainer = document.getElementById("accordionFAQ");
 
-        for (const key in data) {
-            if (data.hasOwnProperty(key)) {
-                const item = data[key];
+        for (const key in data['faq']) {
+            if (data['faq'].hasOwnProperty(key)) {
+                const item = data['faq'][key];
 
                 // Create the accordion item elements
                 const accordionItem = document.createElement("div");
