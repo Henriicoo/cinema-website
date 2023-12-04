@@ -234,8 +234,8 @@ async function createFilmesElements() {
     if (diasFechados && Array.isArray(diasFechados) && diasFechados.includes(diaCal)) {
         programacao.innerHTML = '<div class="container-fluid" style="background-color: #543DB2; margin-top: 24px">' +
             '    <div class="container text-center" style="padding-top: 64px; padding-bottom: 128px">' +
-            '        <h1>Infelizmente n&atilde;o h&aacute; nenhuma sess&atilde;o programada para hoje</h1>' +
-            '        <h2>Procure por outro dia</h2>' +
+            '        <h1>Infelizmente n&atilde;o h&aacute; nenhuma sess&atilde;o programada para esse dia</h1>' +
+            '        <h2>Por favor, selecione outra data para conferir a programa&ccedil&atilo</h2>' +
             '    </div>' +
             '    </div>';
         return;
