@@ -64,7 +64,7 @@
       "atores": "Tom Blyth, Rachel Zegler, Josh Andrés Rivera",
       "genero": "AÇÃO/ROMANCE/DRAMA",
       "imdb": "7,3",
-      "fim": "20/03/2024",
+      "fim": "20/03/2030",
       "uuid": "3f8e641c-9e58-4299-aa57-eb620418a585"
     },
     "7f5ac1bd-7071-43db-8b02-d2ef98e0fcfe": {
@@ -131,7 +131,7 @@
       "atores": "Joaquin Phoenix, Vanessa Kirby, Tahar Rahim",
       "genero": "DRAMA/HISTÓRIA/GUERRA",
       "imdb": "6,5",
-      "fim": "20/03/2024",
+      "fim": "20/03/2030",
       "uuid": "7f5ac1bd-7071-43db-8b02-d2ef98e0fcfe"
     },
 	"3b7efcd7-5e5c-498e-b3ae-819685160c81": {
@@ -198,7 +198,7 @@
       "atores": "Brie Larson, Teyonah Parris, Iman Vellani",
       "genero": "FICÇÃO/AÇÃO/AVENTURA",
       "imdb": "6,6",
-      "fim": "20/03/2024",
+      "fim": "20/03/2030",
       "uuid": "3b7efcd7-5e5c-498e-b3ae-819685160c81"
     },
     "ba4a7ea9-d831-4d04-89ec-49ea4d54cd1a": {
@@ -265,7 +265,7 @@
       "atores": "Sophia Valverde, Ígor Jansen, Duda Pimenta",
       "genero": "COMÉDIA/AVENTURA",
       "imdb": "?",
-      "fim": "20/03/2024",
+      "fim": "20/03/2030",
       "uuid": "ba4a7ea9-d831-4d04-89ec-49ea4d54cd1a"
     },
     "4f580f85-af25-42d5-ba1b-8e8481fc1442": {
@@ -342,7 +342,7 @@
       "atores": "Timothée Chalamet, Calah Lane, Keegan-Michael Key",
       "genero": "COMÉDIA/FAMÍLIA/FANTASIA",
       "imdb": "?",
-      "fim": "20/03/2024",
+      "fim": "20/03/2030",
       "uuid": "4f580f85-af25-42d5-ba1b-8e8481fc1442"
     },
     "18d0b1b2-2780-4829-8590-f9d04cde3435": {
@@ -419,7 +419,7 @@
       "atores": "Jason Momoa, Patrick Wilson, Amber Heard",
       "genero": "AÇÃO/AVENTURA/FANTASIA",
       "imdb": "?",
-      "fim": "20/03/2024",
+      "fim": "20/03/2030",
       "uuid": "18d0b1b2-2780-4829-8590-f9d04cde3435"
     }
   }
